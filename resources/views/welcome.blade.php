@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{ die; }} <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 <head>
     <meta name="google-site-verification" content="8hXPsBeIeEwKfMyoLpMuzjy9GvWlYxD8hMqDtWyIXXM" />
