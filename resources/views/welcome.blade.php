@@ -334,11 +334,8 @@
                 <div class="logo">
                     <img src="img/logo.png" alt="">
                 </div>
-                <div class="footer-social">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                    <a href="#"><i class="fa fa-behance"></i></a>
+                <div class="footer-social">                    
+                    <a href="https://twitter.com/leecrosdale"><i class="fa fa-twitter"></i></a>                    
                 </div>
             </div>
         </div>
