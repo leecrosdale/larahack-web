@@ -4,6 +4,10 @@
     <meta name="google-site-verification" content="8hXPsBeIeEwKfMyoLpMuzjy9GvWlYxD8hMqDtWyIXXM" />
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/fav.png">
     <!-- Author Meta -->
@@ -28,9 +32,12 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
+
+
+
 </head>
 <body>
-<div class="main-wrapper-first">
+<div class="main-wrapper-first" id="app">
     <header>
         <div class="container">
             <div class="header-wrap">
@@ -57,6 +64,7 @@
                     <div class="banner-content text-center">
                         <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon</span>
                         <h1 class="text-white text-uppercase">Starting February 3rd 2018 @ 8am </h1>
+                        <countdown-component></countdown-component>
                         <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
                     </div>
                 </div>
@@ -329,9 +337,8 @@
     <!-- End footer Area -->
 </div>
 
-
-
-
+<script src="{{ asset('js/app.js') }}"></script>
+<script src="js/moment.js"></script>
 <script src="js/vendor/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
