@@ -7,7 +7,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/fav.png">
     <!-- Author Meta -->
@@ -63,7 +63,7 @@
                 <div class="col-lg-8">
                     <div class="banner-content text-center">
                         <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon</span>
-                        <h1 class="text-white text-uppercase">Starting February 3rd 2018 @ 8am </h1>
+                        <h1 class="text-white text-uppercase">Starting February 3rd 2018</h1>
                         <countdown-component></countdown-component>
                         <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
                     </div>
