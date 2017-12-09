@@ -240,43 +240,29 @@
                     <p>Below are <i>Recommended</i> Charities that were submitted to us.</p>
 
                     <p>CONTACT US IF YOU HAVE A CHARITY IDEA!!</p>
+
+                    <br/><br/>
+
+                    <h3>Sponsors</h3>
+
                 </div>
             </div>
         </div>
-        <div class="active-works-carousel mt-40" style="display:none">
+
+        <div class="active-works-carousel mt-40">
+
             <div class="item">
-                <div class="thumb" style="background: url(img/w1.jpg);"></div>
+                <div class="thumb" style="background: url(img/sponsor/snapshooter.png);"></div>
                 <div class="caption text-center">
-                    <h6 class="text-uppercase">Vector Illustration</h6>
-                    <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to</p>
+                    <h6 class="text-uppercase"><a href="https://snapshooter.io">Snapshooter.io</a></h6>
+                    <p>Don't lose your data. Schedule frequent customizable DigitalOcean backups of your droplets and volumes.</p>
                 </div>
             </div>
             <div class="item">
-                <div class="thumb" style="background: url(img/w1.jpg);"></div>
+                <div class="thumb" style="background: url(img/sponsor/laraveluk.png);"></div>
                 <div class="caption text-center">
-                    <h6 class="text-uppercase">Vector Illustration</h6>
-                    <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="thumb" style="background: url(img/w1.jpg);"></div>
-                <div class="caption text-center">
-                    <h6 class="text-uppercase">Vector Illustration</h6>
-                    <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="thumb" style="background: url(img/w1.jpg);"></div>
-                <div class="caption text-center">
-                    <h6 class="text-uppercase">Vector Illustration</h6>
-                    <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="thumb" style="background: url(img/w1.jpg);"></div>
-                <div class="caption text-center">
-                    <h6 class="text-uppercase">Vector Illustration</h6>
-                    <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to</p>
+                    <h6 class="text-uppercase"><a href="https://laraveluk.gitlab.io/">LaravelUK</a></h6>
+                    <p>The most exciting coding group in the UK</p>
                 </div>
             </div>
         </div>
