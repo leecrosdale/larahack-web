@@ -2195,7 +2195,7 @@ body:after {
 
 .active-works-carousel .item .thumb {
   background-position: center center !important;
-  background-size: cover !important;
+  /*background-size: cover !important;*/
   background-repeat: no-repeat !important;
   height: 320px;
 }
