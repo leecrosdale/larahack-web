@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $users = \App\User::count();
+    return view('welcome', ['count' => $users]);
 });
 
 Auth::routes();

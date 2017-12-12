@@ -65,6 +65,7 @@
                         <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon</span>
                         <h1 class="text-white text-uppercase">Starting February 3rd 2018</h1>
                         <countdown-component></countdown-component>
+                        <h3>Join {{ $count }} other LaraHackers now!</h3>
                         <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
                     </div>
                 </div>
