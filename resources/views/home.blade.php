@@ -16,8 +16,6 @@
 
                         Thanks for registering, check back soon for more information!
 
-
-
                 </div>
             </div>
         </div>
