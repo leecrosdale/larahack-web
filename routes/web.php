@@ -19,3 +19,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['middleware' => 'auth'], function() {
+
+    Route::resource('team', 'TeamController');
+    Route::resource('project', 'ProjectController');
+    Route::resource('posts', 'ArticleController');
+    Route::resource('swag', 'SwagController');
+
+});
