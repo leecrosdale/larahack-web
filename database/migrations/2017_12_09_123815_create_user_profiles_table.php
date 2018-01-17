@@ -14,8 +14,18 @@ class CreateUserProfilesTable extends Migration
     public function up()
     {
         Schema::create('user_profiles', function (Blueprint $table) {
+
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->text('bio');
+            $table->string('facebook');
+            $table->string('twitter');
+            $table->string('linkedin');
+            $table->dateTime('dob');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
+
         });
     }
 

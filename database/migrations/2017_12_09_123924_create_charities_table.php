@@ -15,6 +15,9 @@ class CreateCharitiesTable extends Migration
     {
         Schema::create('charities', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name', 90);
+            $table->text('url');
+            $table->integer('order')->unsigned();
             $table->timestamps();
         });
     }

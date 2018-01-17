@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSponsorsTable extends Migration
+class CreateTeamUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateSponsorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sponsors', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name', 90);
-            $table->text('url');
-            $table->integer('order')->unsigned();
+        Schema::create('team_users', function (Blueprint $table) {
+            $table->integer('team_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('team_id')->references('id')->on('teams');
+            $table->foreign('user_id')->references('id')->on('users');
+
         });
     }
 
@@ -29,6 +31,6 @@ class CreateSponsorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sponsors');
+        Schema::dropIfExists('team_users');
     }
 }
