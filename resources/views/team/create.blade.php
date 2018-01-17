@@ -33,6 +33,20 @@
                                 </div>
                             </div>
 
+                            <div class="form-group{{ $errors->has('team_url') ? ' has-error' : '' }}">
+                                <label for="team_name" class="col-md-4 control-label">Team Url (Git/Website)</label>
+
+                                <div class="col-md-6">
+                                    <input id="team_name" type="text" class="form-control" name="team_name" value="{{ old('team_url') }}" required autofocus>
+
+                                    @if ($errors->has('team_url'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('team_url') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button class="btn btn-primary col-md-12" type="submit">

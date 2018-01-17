@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class ArticleController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::paginate(10);
+
+        return view('post.index', ['posts' => $posts]);
     }
 
     /**
@@ -23,7 +27,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        $latest_post = Post::where('user_id', Auth::user()->id)->orderBy('id', 'DESC')->first();
+        return view('post.create', ['latest_post' => $latest_post]);
     }
 
     /**
@@ -34,7 +39,27 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+           'title' => 'required|max:80',
+           'description' => 'required'
+        ]);
+
+
+        $latest_post = Post::where('user_id', Auth::user()->id)->orderBy('id', 'DESC')->first();
+
+        if ($latest_post && $latest_post->created_at > \Carbon\Carbon::now()->addMinutes(-30)) {
+
+            Post::create([
+                'title' => $request->input('title'),
+                'description' => $request->input('description'),
+                'user_id' => Auth::user()->id
+            ]);
+
+        }
+
+        return redirect(url('posts'));
+
+
     }
 
     /**

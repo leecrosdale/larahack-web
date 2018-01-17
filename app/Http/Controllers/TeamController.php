@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Team;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TeamController extends Controller
 {
@@ -36,7 +37,20 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $team = Team::where('team_name', $request->input('team_name'))->first();
+
+        if($team) {
+
+        } else {
+
+            $team = new Team();
+            $team->team_name = $request->input('team_name');
+            $team->team_url = $request->input('team_url');
+            $team->user_id = Auth::user()->id;
+            $team->save();
+
+        }
+
     }
 
     /**

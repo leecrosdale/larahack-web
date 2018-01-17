@@ -25,7 +25,7 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::resource('team', 'TeamController');
     Route::resource('project', 'ProjectController');
-    Route::resource('posts', 'ArticleController');
+    Route::resource('posts', 'PostController');
     Route::resource('swag', 'SwagController');
 
 });
