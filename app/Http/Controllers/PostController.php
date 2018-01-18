@@ -48,14 +48,16 @@ class PostController extends Controller
         $latest_post = Post::where('user_id', Auth::user()->id)->orderBy('id', 'DESC')->first();
 
         if ($latest_post && $latest_post->created_at > \Carbon\Carbon::now()->addMinutes(-30)) {
-
-            Post::create([
-                'title' => $request->input('title'),
-                'description' => $request->input('description'),
-                'user_id' => Auth::user()->id
-            ]);
-
+            return redirect(url('posts'));
         }
+
+        Post::create([
+            'title' => $request->input('title'),
+            'description' => $request->input('description'),
+            'user_id' => Auth::user()->id
+        ]);
+
+
 
         return redirect(url('posts'));
 
