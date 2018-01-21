@@ -262,7 +262,7 @@
             <div class="item">
                 <a href="https://linode.com"><div class="thumb" style="background: url(img/sponsor/digitalocean.png);"></div></a>
                 <div class="caption text-center">
-                    <h6 class="text-uppercase"><a href="https://www.digitalocean.com/">Digital Ocean</a></h6>
+                    <h6 class="text-uppercase"><a href="https://www.digitalocean.com/">DigitalOcean</a></h6>
                     <p>DigitalOcean gets out of your way so teams can build, deploy, and scale cloud applications faster and more efficiently. </p>
                 </div>
             </div>
