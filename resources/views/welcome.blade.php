@@ -125,9 +125,9 @@
                     <div class="section-title text-center">
                         <h3 class="text-white">Prizes</h3>
                         <span class="text-white text-uppercase">
-                            <h3 class="text-white"> First Place: $500 in DigitalOcean Credits</h3>
-                            <h3 class="text-white"> Second Place: $250 in DigitalOcean Credits</h3>
-                            <h3 class="text-white">Third Place: $100 in DigitalOcean Credits</h3>
+                            <h3 class="text-white">First Place: $500 in DigitalOcean Credits</h3>
+                            <h3 class="text-white">Second Place: $250 in DigitalOcean Credits</h3>
+                            <h3 class="text-white">Third Place: $125 in DigitalOcean Credits</h3>
                         </span>
                     </div>
                 </div>
