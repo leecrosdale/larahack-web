@@ -62,15 +62,11 @@
             <div class="row justify-content-center height align-items-center">
                 <div class="col-lg-8">
                     <div class="banner-content text-center">
-                        <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon</span>
+                        <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon (Prizes Available)</span>
                         <h1 class="text-white text-uppercase">Starting February 3rd 2018</h1>
                         <countdown-component></countdown-component>
                         <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
                         <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
-
-
-                        <br/><br/><h3 class="text-white">Check out the amazing prizes below</h3>
-
                     </div>
                 </div>
             </div>
