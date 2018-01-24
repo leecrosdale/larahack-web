@@ -62,15 +62,11 @@
             <div class="row justify-content-center height align-items-center">
                 <div class="col-lg-8">
                     <div class="banner-content text-center">
-                        <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon</span>
+                        <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon (Prizes Available)</span>
                         <h1 class="text-white text-uppercase">Starting February 3rd 2018</h1>
                         <countdown-component></countdown-component>
                         <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
                         <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
-
-
-                        <br/><br/><h3 class="text-white">Check out the amazing prizes below</h3>
-
                     </div>
                 </div>
             </div>
@@ -129,9 +125,9 @@
                     <div class="section-title text-center">
                         <h3 class="text-white">Prizes</h3>
                         <span class="text-white text-uppercase">
-                            <h3 class="text-white"> First Place: $500 in Digital Ocean Credits</h3>
-                            <h3 class="text-white"> Second Place: $250 in Digital Ocean Credits</h3>
-                            <h3 class="text-white">Third Place: $100 in Digital Ocean Credits</h3>
+                            <h3 class="text-white">First Place: $500 in DigitalOcean Credits</h3>
+                            <h3 class="text-white">Second Place: $250 in DigitalOcean Credits</h3>
+                            <h3 class="text-white">Third Place: $125 in DigitalOcean Credits</h3>
                         </span>
                     </div>
                 </div>
@@ -262,7 +258,7 @@
             <div class="item">
                 <a href="https://linode.com"><div class="thumb" style="background: url(img/sponsor/digitalocean.png);"></div></a>
                 <div class="caption text-center">
-                    <h6 class="text-uppercase"><a href="https://www.digitalocean.com/">Digital Ocean</a></h6>
+                    <h6 class="text-uppercase"><a href="https://www.digitalocean.com/">DigitalOcean</a></h6>
                     <p>DigitalOcean gets out of your way so teams can build, deploy, and scale cloud applications faster and more efficiently. </p>
                 </div>
             </div>
