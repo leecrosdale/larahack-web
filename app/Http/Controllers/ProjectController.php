@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
 {
@@ -13,7 +15,10 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+
+        $projects = Project::all();
+
+        return view('project.index', ['projects' => $projects]);
     }
 
     /**
@@ -23,7 +28,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $latest_project = Project::where('user_id', Auth::user()->id)->first();
+        return view('project.create', ['latest_project' => $latest_project]);
     }
 
     /**
@@ -34,7 +40,26 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:80',
+            'description' => 'required'
+        ]);
+
+        $latest_post = Project::where('user_id', Auth::user()->id)->first();
+
+        if ($latest_post) {
+            return redirect(url('projects'));
+        }
+
+        Project::create([
+            'title' => $request->input('title'),
+            'description' => $request->input('description'),
+            'url' => $request->input('url'),
+            'repo' => $request->input('repo'),
+            'image' => $request->input('image'),
+            'user_id' => Auth::user()->id
+        ]);
+
     }
 
     /**

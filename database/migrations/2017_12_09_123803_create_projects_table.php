@@ -18,6 +18,7 @@ class CreateProjectsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('name', 60);
             $table->text('url');
+            $table->text('repo');
             $table->text('image');
             $table->timestamps();
 

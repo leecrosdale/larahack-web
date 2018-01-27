@@ -52,7 +52,7 @@
                             <li><a href="https://laraveluk.signup.team/" target="_blank">Slack</a></li>
                             <li><a href="{{ url('swag') }}">Swag</a></li>
                             <li><a href="{{ url('posts') }}">Posts</a></li>
-                            {{--<li><a href="{{ url('project') }}">Projects</a></li>--}}
+                            <li><a href="{{ url('project') }}">Projects</a></li>
                             {{--<li><a href="{{ url('team') }}">Teams</a></li>--}}
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">

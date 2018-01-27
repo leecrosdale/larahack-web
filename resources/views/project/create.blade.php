@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Create a new Post</div>
+                    <div class="panel-heading">Submit a project</div>
 
                     <div class="panel-body">
 
@@ -16,13 +16,11 @@
                             </div>
                         @endif
 
-                        @if ($latest_post && $latest_post->created_at > \Carbon\Carbon::now()->addMinutes(-30))
-
-                            You can create a new post once every 30 minutes.
-
+                        @if ($latest_project)
+                            You can only create 1 project per event.
                         @else
 
-                            <form class="form-horizontal" action="{{ url('posts') }}" method="post">
+                            <form class="form-horizontal" action="{{ url('project') }}" method="post">
 
                                 {{ csrf_field() }}
 
@@ -42,7 +40,7 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
-                                    <label for="description" class="col-md-4 control-label">Post</label>
+                                    <label for="description" class="col-md-4 control-label">Description</label>
 
                                     <div class="col-md-6">
                                         <textarea id="description" type="text" class="form-control" name="description"
@@ -56,25 +54,43 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <div class="col-md-6 col-md-offset-4">
+                                <div class="form-group{{ $errors->has('repo') ? ' has-error' : '' }}">
+                                    <label for="repo" class="col-md-4 control-label">Repository</label>
 
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="url" id="repo">
 
-                                        <button class="btn btn-primary col-md-12" type="submit">
-                                            Create
-                                        </button>
-
-
+                                        @if ($errors->has('repo'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('repo') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
                                 </div>
 
+                                <div class="form-group{{ $errors->has('url') ? ' has-error' : '' }}">
+                                    <label for="url" class="col-md-4 control-label">Website</label>
+
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="url" id="url">
+
+                                        @if ($errors->has('url'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('url') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-4">
+                                        <button class="btn btn-primary col-md-12" type="submit">
+                                            Create
+                                        </button>
+                                    </div>
+                                </div>
                             </form>
-
-
-
                         @endif
-
-
                     </div>
                 </div>
             </div>
