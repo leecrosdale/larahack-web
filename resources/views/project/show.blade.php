@@ -23,7 +23,13 @@
                                 @if ($project->repo != '') <p>Repository: <a href="{{ $project->repo }}">{{ $project->repo }}</a></p> @endif
 
                                 <hr/>
-                                <h2>Members - <a href="{{ url('project/' . $project->id . '/join') }}"><button class="btn btn-success">Join</button></a></h2>
+                                <h2>Members
+
+                                    @if(!$project->join_requests()->where('user_id', \Illuminate\Support\Facades\Auth::user()->id)->first())
+                                        - <a href="{{ url('project/' . $project->id . '/join') }}"><button class="btn btn-success">Join</button></a>
+                                    @endif
+
+                                </h2>
 
                                 @foreach ($project->users()->get() as $user)
                                     <p>{{ $user->name }}</p>
