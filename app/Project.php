@@ -6,14 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    protected $fillable = ['user_id','title','description','url','repo', 'image'];
-
-    public function user() {
-        return $this->belongsTo('App\User');
-    }
-
+    protected $fillable = ['title','description','url','repo', 'image'];
 
     public function users() {
-        return $this->hasManyThrough('App\User','App\UserProject');
+        return $this->belongsToMany('App\User');
+    }
+
+    public function join_requests() {
+        return $this->hasMany('App\JoinRequest');
     }
 }

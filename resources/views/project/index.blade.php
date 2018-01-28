@@ -18,29 +18,26 @@
                         @if ($projects->isEmpty())
                             <h3>No projects yet.</h3>
                         @else
+
+                            <div class="row">
+
                             @foreach ($projects as $project)
 
-                                <article>
-                                    <h2>{{ $project->name }}</h2>
-                                    <p>{{ $project->description }}</p>
-                                    <p>Owner: {{ $project->user->name }}</p>
+                                <div class="col-md-4" style="text-align:center">
+                                    <article>
+                                        <img src="{{ url('img/blank.png') }}" style="width:100%">
+                                        <h2>{{ $project->title }}</h2>
+                                        <p>{{ substr($project->description,0,15) }}@if (strlen($project->description) > 15)... @endif</p>
+                                        <p>Members: {{ count($project->users()->get()) }}</p>
+                                        <a href="{{ url('project/' . $project->id) }}"><button class="btn">View</button></a>
+                                    </article>
+                                </div>
 
-                                    @if (count($project->users()->get() > 0))
-
-                                        @foreach ($project->users()->get() as $user)
-                                            <p>{{ $user->name }}</p>
-                                        @endforeach
-
-                                    @endif
-                                </article>
-
-                                <hr/>
-
+                                @if ($loop->iteration % 3 === 0) </div><div class="row"><hr/> @endif
 
                             @endforeach
 
-
-                            {{ $posts->links() }}
+                            </div>
 
                         @endif
 
