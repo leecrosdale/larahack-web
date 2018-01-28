@@ -150,7 +150,7 @@ class ProjectController extends Controller
 
         JoinRequest::create(['user_id'=>Auth::user()->id, 'project_id' => $id]);
 
-        return redirect(url('requests'));
+        return redirect(url('request'));
 
     }
 
