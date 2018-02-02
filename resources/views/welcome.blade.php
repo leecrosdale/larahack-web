@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 <head>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MT7GJR3');</script>
+    <!-- End Google Tag Manager -->
+
     <meta name="google-site-verification" content="8hXPsBeIeEwKfMyoLpMuzjy9GvWlYxD8hMqDtWyIXXM" />
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,8 +44,16 @@
 
 
 
+
+
 </head>
 <body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT7GJR3"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div class="main-wrapper-first" id="app">
     <header>
         <div class="container">
@@ -63,8 +80,16 @@
                 <div class="col-lg-8">
                     <div class="banner-content text-center">
                         <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon (Prizes Available)</span>
-                        <h1 class="text-white text-uppercase">February 3rd 2018 8am (UTC+00:00)</h1>
-                        <countdown-component></countdown-component>
+
+                        @if (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-03T08:00:00')->toDateTimeString())
+                            <h1 class="text-white text-uppercase">Event has Started <br/> {{ env('THEME') }} </h1>
+                            <h3>Event Ends:</h3>
+                            <end-countdown></end-countdown>
+
+                        @else
+                            <h1 class="text-white text-uppercase">February 3rd 2018 8am (UTC+00:00)</h1>
+                            <countdown-component></countdown-component>
+                        @endif
                         <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
                         <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
                     </div>
@@ -256,7 +281,7 @@
         <div class="active-works-carousel mt-40">
 
             <div class="item">
-                <a href="https://linode.com"><div class="thumb" style="background: url(img/sponsor/digitalocean.png);"></div></a>
+                <a href="https://www.digitalocean.com"><div class="thumb" style="background: url(img/sponsor/digitalocean.png);"></div></a>
                 <div class="caption text-center">
                     <h6 class="text-uppercase"><a href="https://www.digitalocean.com/">DigitalOcean</a></h6>
                     <p>DigitalOcean gets out of your way so teams can build, deploy, and scale cloud applications faster and more efficiently. </p>
@@ -359,5 +384,6 @@
 <script src="js/jquery.nice-select.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>

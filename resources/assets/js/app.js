@@ -17,6 +17,7 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('countdown-component', require('./components/CountdownComponent.vue'));
+Vue.component('end-countdown', require('./components/EndCountdown.vue'));
 
 
 const app = new Vue({
