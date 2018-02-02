@@ -43180,9 +43180,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 
 
@@ -43764,10 +43761,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "h1",
-    [
-      _c("Countdown", { attrs: { deadline: "03 Feb 2018 08:00:00 GMT" } }),
-      _vm._v("\n\n        @" + _vm._s(_vm.date) + "\n")
-    ],
+    [_c("Countdown", { attrs: { deadline: "03 Feb 2018 08:00:00 GMT" } })],
     1
   )
 }
