@@ -14,8 +14,11 @@
                             </div>
                         @endif
 
-                       Swag links will appear here once the event starts.
+                        Thanks for taking part in LaraHack, <br/><br/>
 
+                           <h2>Here's $15 Linode credit!</h2><br/>
+                            For their smallest 1GB plan, that’s 3 months of service.<br/>
+                            Just head to Linode.com and enter the promo code, <b>LARAHACK2018</b>, when you sign up.
 
                     </div>
                 </div>

@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <h1>Theme: TBA</h1>
+                    <h1>Theme: {{ env('THEME', 'TBA') }}</h1>
 
                     <br/><br/>
 
