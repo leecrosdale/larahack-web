@@ -14,9 +14,32 @@
                         </div>
                     @endif
 
-                    <h1>Theme: {{ env('THEME', 'TBA') }}</h1>
+                    @if (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-03T08:00:00')->toDateTimeString())
+                     <h1>Theme: {{ env('THEME') }}</h1>
 
-                    <br/><br/>
+                    <hr/>
+
+                    <h3>Help! I don't have any ideas yet!</h3>
+
+                    <p>Do not worry my LaraHack buddy, here are some pointers/ideas to get you started. </p>
+                    <p>First of all, the theme is more of a guideline than a rule (points if you got the reference).</p>
+                    <p>Second, yes, there is a prize aimed at the theme, but there are 2 other prizes too. Maybe you can still come up with a good idea, OR use the Laravel framework in an amazing way. </p>
+                    <p>Third, TEXT BASED ADVENTURE GAME (Make the 21st century great again).</p>
+                    <p>Fourth, You could use Laravel as some sort of API backend for a game, or use VueJS to make something, just use Laravel in some way.</p>
+                    <p>Fifth, Just use the event to learn something, do something you've never done before, try something new. Self-Improvement is what it's all about.</p>
+                    <p>And last but not least, have fun, maybe you'll finish something, maybe you won't, but you'd have done your best, and that's all we can ask.</p>
+
+                    <h3>Good luck LaraHackers! May Laravel be with you.</h3>
+
+                    @else
+
+                    <h1>Theme: TBA</h1>
+
+
+                    @endif
+
+
+                    <hr/>
 
                     <h2>FAQ</h2>
                     What do I do now? <br/><br/>
