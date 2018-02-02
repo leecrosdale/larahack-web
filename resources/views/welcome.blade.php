@@ -81,7 +81,7 @@
                     <div class="banner-content text-center">
                         <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon (Prizes Available)</span>
 
-                        @if (\Carbon\Carbon::now()->toDateTimeString() < \Carbon\Carbon::parse('2018-02-03T08:00:00')->toDateTimeString())
+                        @if (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-03T08:00:00')->toDateTimeString())
                             <h1 class="text-white text-uppercase">Event has Started <br/> {{ env('THEME') }} </h1>
                             <h3>Event Ends:</h3>
                             <end-countdown></end-countdown>
