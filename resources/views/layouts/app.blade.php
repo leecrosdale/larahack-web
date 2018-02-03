@@ -76,7 +76,7 @@
                                 </a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{ url('#') }}">My Profile</a></li>
+                                    <li><a href="{{ url('user/' . \Illuminate\Support\Facades\Auth::user()->id) }}">My Profile</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

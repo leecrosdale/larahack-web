@@ -35,6 +35,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('request', 'JoinController');
     Route::get('request/{id}/{project_id}/{status}', 'JoinController@joinUpdate');
 
-
+    Route::get('user/{user_id}', 'UserController@profile');
 
 });
