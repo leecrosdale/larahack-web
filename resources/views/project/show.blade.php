@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">{{ $project->title }}</div>
                     <div class="panel-body">
@@ -23,11 +23,26 @@
                                 @if ($project->repo != '') <p>Repository: <a href="{{ $project->repo }}">{{ $project->repo }}</a></p> @endif
 
                                 <hr/>
+
+                                    @if (env('VOTING_LIVE', false))
+
+                                        <h2>Voting - <a href="{{ url('voting/rules') }}">Voting Rules</a></h2>
+
+                                        <div class="row">
+                                            <div class="col-md-4"><a href="{{ url('project/' . $project->id . '/vote/1') }}"><button class="btn btn-success" @if (isset($votes[1])) disabled="disabled" @endif >Best Use of Theme</button></a></div>
+                                            <div class="col-md-4"><a href="{{ url('project/' . $project->id . '/vote/2') }}"><button class="btn btn-info" @if (isset($votes[2])) disabled="disabled" @endif >Best Idea/Project</button></a></div>
+                                            <div class="col-md-4"><a href="{{ url('project/' . $project->id . '/vote/3') }}"><button class="btn btn-danger" @if (isset($votes[3])) disabled="disabled" @endif >Best Use of Laravel Framework</button></a></div>
+                                        </div>
+
+                                    @endif
+
                                 <h2>Members
 
                                     @if(!$project->join_requests()->where('user_id', \Illuminate\Support\Facades\Auth::user()->id)->first())
                                         - <a href="{{ url('project/' . $project->id . '/join') }}"><button class="btn btn-success">Join</button></a>
                                     @endif
+
+
 
                                 </h2>
 
