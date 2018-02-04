@@ -58,7 +58,7 @@
                                     <label for="repo" class="col-md-4 control-label">Repository</label>
 
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" name="url" id="repo" value="{{ $project->repo }}">
+                                        <input type="text" class="form-control" name="repo" id="repo" value="{{ $project->repo }}">
 
                                         @if ($errors->has('repo'))
                                             <span class="help-block">
