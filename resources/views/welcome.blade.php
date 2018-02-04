@@ -81,17 +81,26 @@
                     <div class="banner-content text-center">
                         <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon (Prizes Available)</span>
 
-                        @if (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-03T08:00:00')->toDateTimeString())
+                        @if (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-03T08:00:00')->toDateTimeString() && \Carbon\Carbon::now()->toDateTimeString() < \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString())
                             <h1 class="text-white text-uppercase">Event has Started <br/> {{ env('THEME') }} </h1>
                             <h3>Event Ends:</h3>
                             <end-countdown></end-countdown>
 
+                            <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
+                            <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
+
+                        @elseif (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString())
+                            <h1>Event has ended!</h1>
+                            <h3>Thankyou to everyone who took part, it's been amazing</h3>
+                            <h3>Please login and vote!</h3>
                         @else
                             <h1 class="text-white text-uppercase">February 3rd 2018 8am (UTC+00:00)</h1>
                             <countdown-component></countdown-component>
+
+                            <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
+                            <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
+
                         @endif
-                        <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
-                        <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
                     </div>
                 </div>
             </div>

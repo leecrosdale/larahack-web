@@ -7,6 +7,8 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
 
+                @if (\Carbon\Carbon::now()->toDateTimeString() < \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString())
+
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
@@ -70,6 +72,12 @@
                         </div>
                     </form>
                 </div>
+
+                @else
+
+                    Registration is currently disabled while we do the voting process.
+
+                @endif
             </div>
         </div>
     </div>
