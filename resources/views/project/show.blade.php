@@ -24,7 +24,7 @@
 
                                 <hr/>
 
-                                    @if (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString())
+                                    @if (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString() && \Illuminate\Support\Facades\Auth::user()->created_at > \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString())
 
                                         <h2>Voting - <a href="{{ url('voting/rules') }}">Voting Rules</a></h2>
 
