@@ -24,7 +24,7 @@
 
                                 <hr/>
 
-                                    @if (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString() && \Illuminate\Support\Facades\Auth::user()->created_at > \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString())
+                                    @if (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString() && \Illuminate\Support\Facades\Auth::user()->created_at < \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString())
 
                                         <h2>Voting - <a href="{{ url('voting/rules') }}">Voting Rules</a></h2>
 
@@ -33,6 +33,10 @@
                                             <div class="col-md-4"><a href="{{ url('project/' . $project->id . '/vote/2') }}"><button class="btn btn-info" @if (isset($votes[2])) disabled="disabled" @endif >Best Idea/Project</button></a></div>
                                             <div class="col-md-4"><a href="{{ url('project/' . $project->id . '/vote/3') }}"><button class="btn btn-danger" @if (isset($votes[3])) disabled="disabled" @endif >Best Use of Laravel Framework</button></a></div>
                                         </div>
+
+                                    @elseif(\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString())
+
+                                        <p>You registered after the event ended so you cannot vote.</p>
 
                                     @endif
 
