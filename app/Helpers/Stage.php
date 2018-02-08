@@ -9,6 +9,7 @@
 namespace App\Helpers;
 
 
+use App\Event;
 use Carbon\Carbon;
 
 class Stage
@@ -17,6 +18,10 @@ class Stage
     public static function stage($event) {
 
         $now = Carbon::now()->toDateTimeString();
+
+        if (!$event) {
+            return 0;
+        }
 
         if ($event->event_end <= $now) {
             $stage = 4;
@@ -32,8 +37,16 @@ class Stage
 
         return $stage;
 
+    }
 
+    public static function getEvent() {
+        $event = Event::where('active',1)->where('event_start', '>=', Carbon::now()->toDateTimeString())->where('event_end', '<=', Carbon::now()->toDateTimeString())->first();
 
+        if (!$event) {
+            $event = Event::orderBy('event_start', 'DESC')->where('event_end', '>=', Carbon::now()->toDateTimeString())->first();
+        }
+
+        return $event;
     }
 
 }

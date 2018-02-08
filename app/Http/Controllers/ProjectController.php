@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Stage;
 use App\Helpers\Vote;
 use App\JoinRequest;
 use App\Project;
 use App\User;
-use App\ProjectUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,7 +19,12 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::all();
+        $event = Stage::getEvent();
+        if (!$event) {
+            $projects = Project::all();
+        } else {
+            $projects = Project::where('event_id', $event->id)->get();
+        }
         return view('project.index', ['projects' => $projects]);
     }
 
@@ -36,8 +41,10 @@ class ProjectController extends Controller
 
     private function latestProject($user_id) {
 
+        $event = Stage::getEvent();
+
         $user = User::where('id', $user_id)->first();
-        return $user->projects()->where('owner',1)->first();
+        return $user->projects()->where('owner',1)->where('event_id',$event->id)->first();
     }
 
     /**
@@ -60,12 +67,15 @@ class ProjectController extends Controller
             return redirect(url('projects'));
         }
 
+        $event = Stage::getEvent();
+
         $project = Project::create([
             'title' => $request->input('title'),
             'description' => $request->input('description'),
             'url' => $request->input('url'),
             'repo' => $request->input('repo'),
-            'image' => url('img/blank.png')
+            'image' => url('img/blank.png'),
+            'event_id' => $event->id
         ]);
 
 
@@ -87,7 +97,15 @@ class ProjectController extends Controller
     public function show($id)
     {
         $project = Project::findOrFail($id);
-        return view('project.show', ['project' => $project, 'userIsOwner' => $project->users()->where('owner',1)->where('user_id', Auth::user()->id)->first(),  'votes' => Vote::sortVotes(Auth::user())]);
+        $event = Stage::getEvent();
+
+        if ($event) {
+            $stage = $event->getStage();
+        } else {
+            $stage = 0;
+        }
+
+        return view('project.show', ['stage' => $stage, 'event' => $event, 'project' => $project, 'userIsOwner' => $project->users()->where('owner',1)->where('user_id', Auth::user()->id)->first(),  'votes' => Vote::sortVotes(Auth::user())]);
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Stage;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $event = Stage::getEvent();
+
+        if ($event) {
+            $stage = $event->getStage();
+        } else {
+            $stage = 0;
+        }
+
+        return view('home', ['event' => $event, 'stage' => $stage]);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Helpers\Stage;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
@@ -15,5 +16,10 @@ class Event extends Model
         'event_voting_end',
         'event_ends'
     ];
+
+
+    public function getStage() {
+        return Stage::stage($this);
+    }
 
 }
