@@ -22,13 +22,13 @@
     <!-- Author Meta -->
     <meta name="author" content="CodePixar">
     <!-- Meta Description -->
-    <meta name="description" content="A Laravel Hackathon Starting 3rd Feb 2018">
+    <meta name="description" content="LaraHack - A Laravel Hackathon">
     <!-- Meta Keyword -->
-    <meta name="keywords" content="Laravel Hackathon February LaravelUK">
+    <meta name="keywords" content="Laravel Hackathon LaravelUK Every 3 months">
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>LaraHack - A Laravel Hackathon - Starting 3rd Feb 2018</title>
+    <title>LaraHack - The Laravel Hackathon</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600" rel="stylesheet">
     <!--
