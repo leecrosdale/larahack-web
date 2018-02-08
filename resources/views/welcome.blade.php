@@ -81,25 +81,35 @@
                     <div class="banner-content text-center">
                         <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon (Prizes Available)</span>
 
-                        @if (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-03T08:00:00')->toDateTimeString() && \Carbon\Carbon::now()->toDateTimeString() < \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString())
-                            <h1 class="text-white text-uppercase">Event has Started <br/> {{ env('THEME') }} </h1>
-                            <h3>Event Ends:</h3>
-                            <end-countdown></end-countdown>
+                        @if ($stage === 1)
+                            <h1 class="text-white text-uppercase">Event has Started <br/> {{ $event->theme }} </h1>
+                            <h3>Event Ends / Voting Starts:</h3>
+                            <countdown-component deadline="{{ $event->event_voting_start->toCookieString() }}"></countdown-component>
 
                             <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
                             <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
 
-                        @elseif (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString())
-                            <h1>Event has ended!</h1>
-                            <h3>Thankyou to everyone who took part, it's been amazing</h3>
-                            <h3>Please login and vote!</h3>
+                        @elseif ($stage === 2)
+                            <h1>Voting has Begun</h1>
+                            <h3>Thankyou to everyone who took part, please log in and vote!</h3>
+                            <h3>Voting Ends:</h3>
+                            <countdown-component deadline="{{ $event->event_voting_end->toCookieString() }}"></countdown-component>
+                        @elseif ($stage === 3)
+
+                            <h1>Voting has ended!</h1>
+                            <h3>The winners will be announced in the LaravelUK Slack Channel</h3>
+
+                        @elseif ($event)
+                            <h1 class="text-white text-uppercase">{{ $event->name }}</h1>
+                            <countdown-component deadline="{{ $event->event_start->toCookieString() }}"></countdown-component>
+
+                            <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
+                            <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
+
                         @else
-                            <h1 class="text-white text-uppercase">February 3rd 2018 8am (UTC+00:00)</h1>
-                            <countdown-component></countdown-component>
-
+                            <h1 class="text-white text-uppercase">Next Event is being planned!</h1>
                             <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
-                            <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
-
+                            <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join Us!</span><span class="lnr lnr-arrow-right"></span></a>
                         @endif
                     </div>
                 </div>

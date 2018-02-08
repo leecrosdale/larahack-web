@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    $users = \App\User::count();
-    return view('welcome', ['count' => $users]);
-});
+//Route::get('/', function () {
+//    $users = \App\User::count();
+//
+//
+//    return view('welcome', ['count' => $users]);
+//});
+
+Route::get('/', 'WelcomeController@index');
 
 Auth::routes();
 
