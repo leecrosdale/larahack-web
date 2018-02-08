@@ -17,6 +17,8 @@ class CreateSponsorsTable extends Migration
             $table->increments('id');
             $table->string('name', 90);
             $table->text('url');
+            $table->text('description');
+            $table->text('image');
             $table->integer('order')->unsigned();
             $table->timestamps();
         });
