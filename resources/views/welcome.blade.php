@@ -84,7 +84,7 @@
                         @if ($stage === 1)
                             <h1 class="text-white text-uppercase">Event has Started <br/> {{ $event->theme }} </h1>
                             <h3>Event Ends / Voting Starts:</h3>
-                            <countdown-component deadline="{{ $event->event_voting_start->toCookieString() }}"></countdown-component>
+                            <countdown-component deadline="{{ $event->event_voting_start->toRfc822String() }}"></countdown-component>
 
                             <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
                             <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
@@ -93,7 +93,7 @@
                             <h1>Voting has Begun</h1>
                             <h3>Thankyou to everyone who took part, please log in and vote!</h3>
                             <h3>Voting Ends:</h3>
-                            <countdown-component deadline="{{ $event->event_voting_end->toCookieString() }}"></countdown-component>
+                            <countdown-component deadline="{{ $event->event_voting_end->toRfc822String() }}"></countdown-component>
                         @elseif ($stage === 3)
 
                             <h1>Voting has ended!</h1>
@@ -101,7 +101,7 @@
 
                         @elseif ($event)
                             <h1 class="text-white text-uppercase">{{ $event->name }}</h1>
-                            <countdown-component deadline="{{ $event->event_start->toCookieString() }}"></countdown-component>
+                            <countdown-component deadline="{{ $event->event_start->toRfc822String() }}"></countdown-component>
 
                             <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
                             <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
@@ -169,9 +169,11 @@
                     <div class="section-title text-center">
                         <h3 class="text-white">Prizes</h3>
                         <span class="text-white text-uppercase">
-                            <h3 class="text-white">First Place: $500 in DigitalOcean Credits</h3>
-                            <h3 class="text-white">Second Place: $250 in DigitalOcean Credits</h3>
-                            <h3 class="text-white">Third Place: $125 in DigitalOcean Credits</h3>
+
+                                <h3 class="text-white">First Place: $500 in DigitalOcean Credits</h3>
+                                <h3 class="text-white">Second Place: $250 in DigitalOcean Credits</h3>
+                                <h3 class="text-white">Third Place: $125 in DigitalOcean Credits</h3>
+
                         </span>
                     </div>
                 </div>

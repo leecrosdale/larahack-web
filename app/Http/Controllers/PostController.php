@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Stage;
 use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,11 +16,17 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('id','desc');;//->paginate(10);
+        $event = Stage::getEvent();
+
+        if ($event) {
+            $posts = Post::where('event_id', $event->id)->orderBy('id', 'desc');
+        } else {
+            $posts = Post::orderBy('id', 'desc');
+        }
 
         $posts = $posts->paginate(10);
 
-        return view('post.index', ['posts' => $posts]);
+        return view('post.index', ['posts' => $posts, 'event' => $event]);
     }
 
     /**
@@ -53,10 +60,13 @@ class PostController extends Controller
             return redirect(url('posts'));
         }
 
+        $event = Stage::getEvent();
+
         Post::create([
             'title' => $request->input('title'),
             'description' => $request->input('description'),
-            'user_id' => Auth::user()->id
+            'user_id' => Auth::user()->id,
+            'event_id' => $event->id
         ]);
 
 
