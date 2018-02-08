@@ -24,19 +24,23 @@
 
                                 <hr/>
 
-                                    @if (\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString() && \Illuminate\Support\Facades\Auth::user()->created_at < \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString())
+                                    @if ($event && $project->event_id == $event->id)
 
-                                        <h2>Voting - <a href="{{ url('voting/rules') }}">Voting Rules</a></h2>
+                                        @if ($stage === 2 && \Illuminate\Support\Facades\Auth::user()->created_at < $event->event_voting_start->toDateTimeString())
 
-                                        <div class="row">
-                                            <div class="col-md-4"><a href="{{ url('project/' . $project->id . '/vote/1') }}"><button class="btn btn-success" @if (isset($votes[1])) disabled="disabled" @endif >Best Use of Theme</button></a></div>
-                                            <div class="col-md-4"><a href="{{ url('project/' . $project->id . '/vote/2') }}"><button class="btn btn-info" @if (isset($votes[2])) disabled="disabled" @endif >Best Idea/Project</button></a></div>
-                                            <div class="col-md-4"><a href="{{ url('project/' . $project->id . '/vote/3') }}"><button class="btn btn-danger" @if (isset($votes[3])) disabled="disabled" @endif >Best Use of Laravel Framework</button></a></div>
-                                        </div>
+                                            <h2>Voting - <a href="{{ url('voting/rules') }}">Voting Rules</a></h2>
 
-                                    @elseif(\Carbon\Carbon::now()->toDateTimeString() > \Carbon\Carbon::parse('2018-02-05T08:00:00')->toDateTimeString())
+                                            <div class="row">
+                                                <div class="col-md-4"><a href="{{ url('project/' . $project->id . '/vote/1') }}"><button class="btn btn-success" @if (isset($votes[1])) disabled="disabled" @endif >Best Use of Theme</button></a></div>
+                                                <div class="col-md-4"><a href="{{ url('project/' . $project->id . '/vote/2') }}"><button class="btn btn-info" @if (isset($votes[2])) disabled="disabled" @endif >Best Idea/Project</button></a></div>
+                                                <div class="col-md-4"><a href="{{ url('project/' . $project->id . '/vote/3') }}"><button class="btn btn-danger" @if (isset($votes[3])) disabled="disabled" @endif >Best Use of Laravel Framework</button></a></div>
+                                            </div>
 
-                                        <p>You registered after the event ended so you cannot vote.</p>
+                                        @elseif(\Carbon\Carbon::now()->toDateTimeString() > $event->event_voting_start->toDateTimeString())
+
+                                            <p>You registered after the event ended so you cannot vote.</p>
+
+                                        @endif
 
                                     @endif
 

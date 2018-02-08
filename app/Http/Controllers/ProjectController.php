@@ -97,7 +97,15 @@ class ProjectController extends Controller
     public function show($id)
     {
         $project = Project::findOrFail($id);
-        return view('project.show', ['project' => $project, 'userIsOwner' => $project->users()->where('owner',1)->where('user_id', Auth::user()->id)->first(),  'votes' => Vote::sortVotes(Auth::user())]);
+        $event = Stage::getEvent();
+
+        if ($event) {
+            $stage = $event->getStage();
+        } else {
+            $stage = 0;
+        }
+
+        return view('project.show', ['stage' => $stage, 'event' => $event, 'project' => $project, 'userIsOwner' => $project->users()->where('owner',1)->where('user_id', Auth::user()->id)->first(),  'votes' => Vote::sortVotes(Auth::user())]);
     }
 
     /**
