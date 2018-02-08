@@ -23,7 +23,7 @@
                                 <article>
                                     <h2>{{ $post->title }}</h2>
                                     <p>{{ $post->description }}</p>
-                                    <p>by <a href="{{ url('users/' . $post->user->id) }}">{{ $post->user->name }}</a> - {{ $post->created_at->diffForHumans() }} </p>
+                                    <p>by <a href="{{ url('user/' . $post->user->id) }}">{{ $post->user->name }}</a> - {{ $post->created_at->diffForHumans() }} </p>
                                 </article>
 
                                 <hr/>

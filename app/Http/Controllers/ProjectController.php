@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Vote;
 use App\JoinRequest;
 use App\Project;
 use App\User;
@@ -86,7 +87,7 @@ class ProjectController extends Controller
     public function show($id)
     {
         $project = Project::findOrFail($id);
-        return view('project.show', ['project' => $project, 'userIsOwner' => $project->users()->where('owner',1)->where('user_id', Auth::user()->id)->first()]);
+        return view('project.show', ['project' => $project, 'userIsOwner' => $project->users()->where('owner',1)->where('user_id', Auth::user()->id)->first(),  'votes' => Vote::sortVotes(Auth::user())]);
     }
 
     /**

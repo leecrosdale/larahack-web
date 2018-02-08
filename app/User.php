@@ -32,4 +32,12 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Project');
     }
 
+    public function user_profile() {
+        return $this->hasOne('App\UserProfile');
+    }
+
+    public function votes() {
+        return $this->hasMany('App\Vote');
+    }
+
 }
