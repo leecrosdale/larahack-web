@@ -326,7 +326,7 @@
                 {{--</div>--}}
             {{--</div>--}}
             <div class="item">
-                <a href="https://laraveluk.gitlab.io/"><div class="thumb" style="background: url(img/sponsor/laraveluk.png);"></div></a>
+                <a href="https://laravelphp.uk/"><div class="thumb" style="background: url(img/sponsor/laraveluk.png);"></div></a>
                 <div class="caption text-center">
                     <h6 class="text-uppercase"><a href="https://laraveluk.gitlab.io/">LaravelUK</a></h6>
                     <p>The most exciting coding group in the UK</p>
