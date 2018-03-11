@@ -101,6 +101,7 @@
 
                         @elseif ($event)
                             <h1 class="text-white text-uppercase">{{ $event->name }}</h1>
+                            <h2>{{$event->event_start->formatLocalized('%A %d %B %Y')}}</h2>
                             <countdown-component deadline="{{ $event->event_start->toRfc822String() }}"></countdown-component>
 
                             <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
@@ -301,29 +302,29 @@
 
         <div class="active-works-carousel mt-40">
 
-            <div class="item">
-                <a href="https://www.digitalocean.com"><div class="thumb" style="background: url(img/sponsor/digitalocean.png);"></div></a>
-                <div class="caption text-center">
-                    <h6 class="text-uppercase"><a href="https://www.digitalocean.com/">DigitalOcean</a></h6>
-                    <p>DigitalOcean gets out of your way so teams can build, deploy, and scale cloud applications faster and more efficiently. </p>
-                </div>
-            </div>
+            {{--<div class="item">--}}
+                {{--<a href="https://www.digitalocean.com"><div class="thumb" style="background: url(img/sponsor/digitalocean.png);"></div></a>--}}
+                {{--<div class="caption text-center">--}}
+                    {{--<h6 class="text-uppercase"><a href="https://www.digitalocean.com/">DigitalOcean</a></h6>--}}
+                    {{--<p>DigitalOcean gets out of your way so teams can build, deploy, and scale cloud applications faster and more efficiently. </p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
-            <div class="item">
-                <a href="https://linode.com"><div class="thumb" style="background: url(img/sponsor/linode.png);"></div></a>
-                <div class="caption text-center">
-                    <h6 class="text-uppercase"><a href="https://linode.com">Linode</a></h6>
-                    <p>High performance SSD Linux servers for all of your infrastructure needs.</p>
-                </div>
-            </div>
+            {{--<div class="item">--}}
+                {{--<a href="https://linode.com"><div class="thumb" style="background: url(img/sponsor/linode.png);"></div></a>--}}
+                {{--<div class="caption text-center">--}}
+                    {{--<h6 class="text-uppercase"><a href="https://linode.com">Linode</a></h6>--}}
+                    {{--<p>High performance SSD Linux servers for all of your infrastructure needs.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
-            <div class="item">
-                <a href="https://snapshooter.io"><div class="thumb" style="background: url(img/sponsor/snapshooter.png);"></div></a>
-                <div class="caption text-center">
-                    <h6 class="text-uppercase"><a href="https://snapshooter.io">Snapshooter.io</a></h6>
-                    <p>Don't lose your data. Schedule frequent customizable DigitalOcean backups of your droplets and volumes.</p>
-                </div>
-            </div>
+            {{--<div class="item">--}}
+                {{--<a href="https://snapshooter.io"><div class="thumb" style="background: url(img/sponsor/snapshooter.png);"></div></a>--}}
+                {{--<div class="caption text-center">--}}
+                    {{--<h6 class="text-uppercase"><a href="https://snapshooter.io">Snapshooter.io</a></h6>--}}
+                    {{--<p>Don't lose your data. Schedule frequent customizable DigitalOcean backups of your droplets and volumes.</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <div class="item">
                 <a href="https://laraveluk.gitlab.io/"><div class="thumb" style="background: url(img/sponsor/laraveluk.png);"></div></a>
                 <div class="caption text-center">
