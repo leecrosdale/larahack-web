@@ -21,7 +21,7 @@
 
 
                                 <h2>Prizes / Competition Rules</h2>
-                  
+
 
                             <li>You are allowed to preset / use your own libraries or any assets created before this time, BUT the project must be started after the LaraHack event begins. You are allowed to work in teams, or on your own.</li>
                             <li>All code that you write belongs to you (or whoever the owner is).</li>
