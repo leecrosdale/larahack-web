@@ -25,4 +25,8 @@ class WelcomeController extends Controller
 
         return view('welcome', ['count' => $users, 'stage' => $stage, 'event' => $event]);
     }
+
+	public function terms() {
+		return view('terms');
+	}
 }

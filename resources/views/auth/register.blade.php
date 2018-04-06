@@ -60,6 +60,19 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('terms') ? ' has-error' : '' }}">
+                            <label for="terms" class="col-md-4 control-label">Terms</label>
+                            <div class="col-md-6">
+                                <p><input id="password" type="checkbox" name="terms" required> - I agree to all terms and conditions specified at <a href="{{ url('terms') }}" target="_blank">{{ url('terms') }}</a> and am happy for LaraHack to process/manage and maintain the data I provided to this site.</p>
+
+                                @if ($errors->has('terms'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('terms') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
