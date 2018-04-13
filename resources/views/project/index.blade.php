@@ -16,7 +16,7 @@
 
 
                         @if ($projects->isEmpty())
-                            <h3>No projects yet.</h3>
+                            <h3>No current event projects yet.</h3>
                         @else
 
                             <div class="row">
@@ -41,6 +41,39 @@
 
                         @endif
 
+
+                        @if ($past_projects->isEmpty())
+                                <h3>No Past Projects :(</h3>
+                        @else
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <hr/>
+                                        <h1>Past Projects</h1>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    @foreach ($past_projects as $project)
+
+                                        <div class="col-md-4" style="text-align:center">
+                                            <article>
+                                                <img src="{{ url('img/blank.png') }}" style="width:100%">
+                                                <h2>{{ $project->title }}</h2>
+                                                <p>{{ substr($project->description,0,15) }}@if (strlen($project->description) > 15)... @endif</p>
+                                                <p>Members: {{ count($project->users()->get()) }}</p>
+                                                <a href="{{ url('project/' . $project->id) }}"><button class="btn">View</button></a>
+                                            </article>
+                                        </div>
+
+                                        @if ($loop->iteration % 3 === 0) </div><div class="row"><hr/> @endif
+
+                                    @endforeach
+
+                                </div>
+
+                        @endif
 
                     </div>
                 </div>

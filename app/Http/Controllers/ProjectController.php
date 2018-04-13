@@ -21,11 +21,12 @@ class ProjectController extends Controller
     {
         $event = Stage::getEvent();
         if (!$event) {
-            $projects = Project::all();
+            throw new \Exception('No event found.');
         } else {
             $projects = Project::where('event_id', $event->id)->get();
+            $past_projects = Project::where('event_id','!=', $event->id)->get();
         }
-        return view('project.index', ['projects' => $projects]);
+        return view('project.index', ['projects' => $projects,'past_projects' => $past_projects]);
     }
 
     /**
@@ -35,6 +36,12 @@ class ProjectController extends Controller
      */
     public function create()
     {
+
+        $stage = Stage::stage($event = Stage::getEvent());
+        if ($stage == 0) {
+            return view('notstarted');
+        }
+
         $latest_project = $this->latestProject(Auth::user()->id);
         return view('project.create', ['latest_project' => $latest_project]);
     }
@@ -42,7 +49,6 @@ class ProjectController extends Controller
     private function latestProject($user_id) {
 
         $event = Stage::getEvent();
-
         $user = User::where('id', $user_id)->first();
         return $user->projects()->where('owner',1)->where('event_id',$event->id)->first();
     }
@@ -55,6 +61,11 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+        $stage = Stage::stage($event = Stage::getEvent());
+        if ($stage == 0) {
+            return view('notstarted');
+        }
+
         $request->validate([
             'title' => 'required|max:80',
             'description' => 'required'
