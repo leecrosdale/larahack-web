@@ -81,10 +81,13 @@
                     <div class="banner-content text-center">
                         <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon (Prizes Available)</span>
 
+
                         @if ($stage === 1)
                             <h1 class="text-white text-uppercase">Event has Started <br/> {{ $event->theme }} </h1>
                             <h3>Event Ends / Voting Starts:</h3>
-                            <countdown-component deadline="{{ $event->event_voting_start->toRfc822String() }}"></countdown-component>
+
+
+                            <countdown-component deadline="{{ $event->event_voting_start->toRfc3339String() }}"></countdown-component>
 
                             <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
                             <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
@@ -93,7 +96,7 @@
                             <h1>Voting has Begun</h1>
                             <h3>Thankyou to everyone who took part, please log in and vote!</h3>
                             <h3>Voting Ends:</h3>
-                            <countdown-component deadline="{{ $event->event_voting_end->toRfc822String() }}"></countdown-component>
+                            <countdown-component deadline="{{ $event->event_voting_end->toRfc3339String() }}"></countdown-component>
                         @elseif ($stage === 3)
 
                             <h1>Voting has ended!</h1>
@@ -102,7 +105,7 @@
                         @elseif ($event)
                             <h1 class="text-white text-uppercase">{{ $event->name }}</h1>
                             <h2>{{$event->event_start->formatLocalized('%A %d %B %Y')}}</h2>
-                            <countdown-component deadline="{{ $event->event_start->toRfc822String() }}"></countdown-component>
+                            <countdown-component deadline="{{ $event->event_start->toRfc3339String() }}"></countdown-component>
 
                             <h3>Join {{ $count }} other LaraHackers now!</h3> <br/>
                             <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
