@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Stage;
 use Illuminate\Http\Request;
 
 class SwagController extends Controller
@@ -13,7 +14,7 @@ class SwagController extends Controller
      */
     public function index()
     {
-        return view('swag.index');
+        return view('swag.index',['stage' => Stage::stage(Stage::getEvent())]);
     }
 
     /**
