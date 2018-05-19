@@ -63,12 +63,12 @@
                         <a href="{{ url('') }}"><img src="img/logo.png" alt=""></a>
                     </div>
                     <div class="main-menubar d-flex align-items-center">
-                        <nav class="hide">
+                        <nav>
                             <a href="{{ url('/') }}">Home</a>
                             <a href="{{ url('register') }}">Join</a>
                             <a href="{{ url('login') }}">Login</a>
                         </nav>
-                        <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+                        <div class="menu-bar"><span class="lnr lnr-cross"></span></div>
                     </div>
                 </div>
             </div>
