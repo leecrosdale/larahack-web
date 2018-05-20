@@ -79,7 +79,7 @@
             <div class="row justify-content-center height align-items-center">
                 <div class="col-lg-8">
                     <div class="banner-content text-center">
-                        <span class="text-white top text-uppercase">LaraHack - The 48 Hour Online Laravel Hackathon (Prizes Available)</span>
+                        <span class="text-white top text-uppercase">LaraHack - The Online Laravel Hackathon</span>
 
 
                         @if ($stage === 1)
