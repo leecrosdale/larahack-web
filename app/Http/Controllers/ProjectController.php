@@ -85,7 +85,7 @@ class ProjectController extends Controller
             'description' => $request->input('description'),
             'url' => $request->input('url'),
             'repo' => $request->input('repo'),
-            'image' => url('img/blank.png'),
+            'image' => url('img/blank2.png'),
             'event_id' => $event->id
         ]);
 

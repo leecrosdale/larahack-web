@@ -19,6 +19,19 @@
 
                     <h3>Good luck LaraHackers! May Laravel be with you.</h3>
 
+
+                    Judgment Categories:
+
+                        <ul>
+                            <li>1. Best use of theme</li>
+                            <li>2. Best idea / project</li>
+                            <li>3. Best use of the Laravel Framework</li>
+                        </ul>
+
+
+
+
+
                     @elseif ($stage === 2)
 
 
