@@ -25,7 +25,7 @@
 
                                 <div class="col-md-4" style="text-align:center">
                                     <article>
-                                        <img src="{{ url('img/blank.png') }}" style="width:100%">
+                                        <img src="{{ $project->image }}" style="width:100%">
                                         <h2>{{ $project->title }}</h2>
                                         <p>{{ substr($project->description,0,15) }}@if (strlen($project->description) > 15)... @endif</p>
                                         <p>Members: {{ count($project->users()->get()) }}</p>
@@ -59,7 +59,7 @@
 
                                         <div class="col-md-4" style="text-align:center">
                                             <article>
-                                                <img src="{{ url('img/blank.png') }}" style="width:100%">
+                                                <img src="{{ $project->image }}" style="width:100%">
                                                 <h2>{{ $project->title }}</h2>
                                                 <p>{{ substr($project->description,0,15) }}@if (strlen($project->description) > 15)... @endif</p>
                                                 <p>Members: {{ count($project->users()->get()) }}</p>
