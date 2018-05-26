@@ -353,8 +353,18 @@
                     <div class="thumb" style="background: url(img/sponsor/laraveluk.png);"></div>
                 </a>
                 <div class="caption text-center">
-                    <h6 class="text-uppercase"><a href="https://laraveluk.gitlab.io/">LaravelUK</a></h6>
+                    <h6 class="text-uppercase"><a href="https://laravelphp.uk/">LaravelUK</a></h6>
                     <p>The most exciting coding group in the UK</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <a href="https://codecourse.com">
+                    <div class="thumb" style="background: url(img/sponsor/codecourse.png);"></div>
+                </a>
+                <div class="caption text-center">
+                    <h6 class="text-uppercase"><a href="https://codecourse.com">CodeCourse</a></h6>
+                    <p>Practical screencasts for awesome developers</p>
                 </div>
             </div>
 

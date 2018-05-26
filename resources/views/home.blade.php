@@ -19,6 +19,13 @@
 
                     <h3>Good luck LaraHackers! May Laravel be with you.</h3>
 
+
+                    Prize Categories:
+
+
+
+
+
                     @elseif ($stage === 2)
 
 
