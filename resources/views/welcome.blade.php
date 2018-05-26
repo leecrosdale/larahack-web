@@ -90,7 +90,7 @@
 
 
                         @if ($stage === 1)
-                            <h1 class="text-white text-uppercase">Event has Started <br/> {{ $event->theme }} </h1>
+                            <h1 class="text-white text-uppercase">Event has Started <br/>Theme: {{ $event->theme }} </h1>
                             <h3>Event Ends / Voting Starts:</h3>
 
 
