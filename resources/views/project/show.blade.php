@@ -36,10 +36,6 @@
                                                 <div class="col-md-4"><a href="{{ url('project/' . $project->id . '/vote/3') }}"><button class="btn btn-danger" @if (isset($votes[3])) disabled="disabled" @endif >Best Use of Laravel Framework</button></a></div>
                                             </div>
 
-                                        @elseif(\Carbon\Carbon::now()->toDateTimeString() > $event->event_voting_start->toDateTimeString())
-
-                                            <p>You registered after the event ended so you cannot vote.</p>
-
                                         @endif
 
                                     @endif
