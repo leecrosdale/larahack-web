@@ -74,7 +74,7 @@
                         <li>Decide if you are working alone or in a team.</li> <br/>
                         <li>Once decided, the leader should create a project at the top, and team members (if any) can then request to join the project by viewing it and clicking 'join'</li><br/>
                         <li>Work on your project :-)</li><br/>
-                        <li>In {{ $event->event_voting_start->diffForHumans() }} at {{ $event->event_voting_start->format("H:i ") }} the event will end. By this time, you should cease working and post an image of your latest commit (and time) to the larahack on the LaravelUK slack channel</li><br/>
+                        @if ($event) <li>In {{ $event->event_voting_start->diffForHumans() }} at {{ $event->event_voting_start->format("H:i ") }} the event will end. By this time, you should cease working and post an image of your latest commit (and time) to the larahack on the LaravelUK slack channel</li><br/> @endif
                         <li>The judging process now begins</li><br/>
                         <li>We ask everyone to vote for a project in each of the categories.</li><br/>
                         <li>In 1 weeks time, we will total the votes and announce the winners</li><br/>

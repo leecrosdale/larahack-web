@@ -39,12 +39,20 @@ class Stage
 
     }
 
-    public static function getEvent() {
+    public static function getEvent($upcoming = false) {
         $event = Event::where('active',1)->where('event_start', '>=', Carbon::now()->toDateTimeString())->where('event_end', '<=', Carbon::now()->toDateTimeString())->first();
 
         if (!$event) {
-            $event = Event::where('active',1)->orderBy('event_start', 'DESC')->where('event_end', '>=', Carbon::now()->toDateTimeString())->first();
+
+            if ($upcoming) {
+                $event = Event::orderBy('event_start', 'DESC')->where('event_end', '>=', Carbon::now()->toDateTimeString())->first();
+            } else {
+                $event = Event::where('active',1)->orderBy('event_start', 'DESC')->where('event_end', '>=', Carbon::now()->toDateTimeString())->first();
+            }
+
+
         }
+
 
         return $event;
     }
