@@ -49,7 +49,7 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
-
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 
 </head>
 <body>
@@ -72,7 +72,7 @@
                     <div class="main-menubar d-flex align-items-center">
                         <nav>
                             <a href="{{ url('/') }}">Home</a>
-                            <a href="{{ url('register') }}">Get started</a>
+                            <a href="{{ url('register') }}">Join</a>
                             <a href="{{ url('login') }}">Login</a>
                         </nav>
                         <div class="menu-bar"><span class="lnr lnr-cross"></span></div>
@@ -93,42 +93,62 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row justify-content-center height align-items-center">
-            <div class="col-lg-8">
-                <div class="banner-content text-center">
-                    @if ($stage === 1)
-                        <h3 class="text-dark">Event has Started <br/>Theme: {{ $event->theme }}
-                        </h3>
-                        <h3 class="text-dark">Event Ends / Voting Starts:</h3>
-                        <countdown-component
-                                deadline="{{ $event->event_voting_start->toRfc3339String() }}"></countdown-component>
-                        <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span
-                                    class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
-                    @elseif ($stage === 2)
-                        <h3>Voting has Begun</h3>
-                        <h3>Thankyou to everyone who took part, please log in and vote!</h3>
-                        <h3>Voting Ends:</h3>
-                        <countdown-component
-                                deadline="{{ $event->event_voting_end->toRfc3339String() }}"></countdown-component>
-                    @elseif ($stage === 3)
+    <div class="row justify-content-center height align-items-center">
+        <div class="col">
+            <div class="banner-content text-center">
+                @if ($stage === 1)
+                    <h3 class="text-light">Event has Started <br/>Theme: {{ $event->theme }}
+                    </h3>
+                    <h3 class="text-light">Event Ends / Voting Starts:</h3>
+                    <countdown-component
+                            deadline="{{ $event->event_voting_start->toRfc3339String() }}"></countdown-component>
+                @elseif ($stage === 2)
+                    <h3>Voting has Begun</h3>
+                    <h3>Thankyou to everyone who took part, please log in and vote!</h3>
+                    <h3>Voting Ends:</h3>
+                    <countdown-component
+                            deadline="{{ $event->event_voting_end->toRfc3339String() }}"></countdown-component>
+                @elseif ($stage === 3)
 
-                        <h1>Voting has ended!</h1>
-                        <h3>The winners will be announced in the LaravelUK Slack Channel</h3>
+                    <h1>Voting has ended!</h1>
+                    <h3>The winners will be announced in the LaravelUK Slack Channel</h3>
 
-                    @elseif ($event)
-                        <h1 class="text-dark">{{ $event->name }}</h1>
-                        <h2>{{$event->event_start->formatLocalized('%A %d %B %Y')}}</h2>
-                        <countdown-component
-                                deadline="{{ $event->event_start->toRfc3339String() }}"></countdown-component>
-                        <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span
-                                    class="mr-10">Join The Hackathon</span><span class="lnr lnr-arrow-right"></span></a>
-
-                    @else
-                        <h3 class="text-dark">Next Event is being planned!</h3>
-                        <a href="{{ url('register') }}" class="primary-btn d-inline-flex align-items-center"><span
-                                    class="mr-10">Join Us!</span><span class="lnr lnr-arrow-right"></span></a>
-                    @endif
+                @elseif ($event)
+                    <h1 class="text-light">{{ $event->name }}</h1>
+                    <h2>{{$event->event_start->formatLocalized('%A %d %B %Y')}}</h2>
+                    <countdown-component
+                            deadline="{{ $event->event_start->toRfc3339String() }}"></countdown-component>
+                @else
+                    <h3 class="text-light">Next Event is being planned!</h3>
+                @endif
+            </div>
+        </div>
+    </div>
+    <div class=" row justify-content-center height align-items-center">
+        <div class="col">
+            <div class="about text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 text-light">
+                            <h3 class="text-light"><i class="em em-lower_left_paintbrush"></i> THEME BASED</h3>
+                            <p class="m-2">A theme will be announced at the starting time.
+                                Don't feel the theme? Make something else.
+                                All submissions will be accepted.</p>
+                        </div>
+                        <div class="col-sm-4 text-light">
+                            <h3 class="text-light"><i class="em em-couple"></i> TEAM OR SOLO</h3>
+                            <p class="m-2">Work together in a Team or go Solo.
+                                All the work you produce is yours to keep. We just ask that you are available for press
+                                /
+                                questions if needed.</p>
+                        </div>
+                        <div class="col-sm-4 text-light">
+                            <h3 class="text-light"><i class="em em-tada"></i> HOW CAN I HELP?</h3>
+                            <p class="m-2">Not a developer / designer? Join our chat and see how you can help. There is
+                                always something
+                                you can do.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
