@@ -350,7 +350,7 @@
             
             <div class="item">
                 <a href="https://www.gamefront.com/m">
-                    <div class="thumb" style="background: url(img/sponsor/gf.png);"></div>
+                    <div class="thumb" style="background: url(img/sponsor/gf.svg);"></div>
                 </a>
                 <div class="caption text-center">
                     <h6 class="text-uppercase"><a href="https://www.gamefront.com/">GameFront</a></h6>
