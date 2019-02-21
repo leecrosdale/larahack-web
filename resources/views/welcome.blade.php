@@ -349,7 +349,7 @@
             {{--</div>--}}
             
             <div class="item">
-                <a href="https://www.gamefront.com/m">
+                <a href="https://www.gamefront.com/">
                     <div class="thumb" style="background: url(img/sponsor/gf.svg);"></div>
                 </a>
                 <div class="caption text-center">
