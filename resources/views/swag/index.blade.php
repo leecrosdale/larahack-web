@@ -20,7 +20,7 @@
 
                                <h2>Here's $15 Linode credit!</h2><br/>
                                 For their smallest 1GB plan, that’s 3 months of service.<br/>
-                                Once the event is running, Just head to Linode.com and enter the promo code, <b>LARAHACK2</b>
+                                Once the event is running, Just head to Linode.com and enter the promo code, <b>LARAHACK3</b>
                         @else
                                 <h2>Swag will appear here once the event starts.</h2>
                         @endif
