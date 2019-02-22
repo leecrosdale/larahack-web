@@ -22,7 +22,8 @@
                     I hope that this theme will inspire you to bring an old project back to life, re-imagined in Laravel. <br/><br/>
                     We all have a project that we wish we finished, or were maybe too inexperienced to write properly at the time. <br/>
                     If you're new to Laravel or to programming in general,  maybe you can interpret the theme in a different way in order to take part. <br/>
-                    e.g Maybe a text based game that involves building, or even a Minecraft showcase platform!
+                    e.g Maybe a text based game that involves building, or even a Minecraft showcase platform!.<br/>
+                        And of course, you are entitled to ignore the theme completely and just build something cool.
 
 
                     <h3>Good luck LaraHackers! May Laravel be with you.</h3>
