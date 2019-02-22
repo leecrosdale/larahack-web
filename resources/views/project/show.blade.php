@@ -26,7 +26,7 @@
 
                                     @if ($event && $project->event_id == $event->id)
 
-                                        @if ($stage === 2 && \Illuminate\Support\Facades\Auth::user()->created_at < $event->event_voting_start->toDateTimeString())
+                                        @if ($stage === 2)
 
                                             <h2>Voting - <a href="{{ url('voting/rules') }}">Voting Rules</a></h2>
 

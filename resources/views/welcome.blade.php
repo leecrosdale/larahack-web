@@ -347,6 +347,16 @@
             {{--<p>DigitalOcean gets out of your way so teams can build, deploy, and scale cloud applications faster and more efficiently. </p>--}}
             {{--</div>--}}
             {{--</div>--}}
+            
+            <div class="item">
+                <a href="https://www.gamefront.com/">
+                    <div class="thumb" style="background: url(img/sponsor/gf.svg);"></div>
+                </a>
+                <div class="caption text-center">
+                    <h6 class="text-uppercase"><a href="https://www.gamefront.com/">GameFront</a></h6>
+                    <p>The best serving of video game culture, since 1998</p>
+                </div>
+            </div>
 
             <div class="item">
                 <a href="https://laravelphp.uk/">
@@ -358,7 +368,7 @@
                 </div>
             </div>
 
-            <div class="item">
+            <!-- <div class="item">
                 <a href="https://codecourse.com">
                     <div class="thumb" style="background: url(img/sponsor/codecourse.png);"></div>
                 </a>
@@ -366,7 +376,7 @@
                     <h6 class="text-uppercase"><a href="https://codecourse.com">CodeCourse</a></h6>
                     <p>Practical screencasts for awesome developers</p>
                 </div>
-            </div>
+            </div> -->
 
             <div class="item">
                 <a href="https://linode.com">
@@ -378,7 +388,7 @@
                 </div>
             </div>
 
-            <div class="item">
+            <!-- <div class="item">
                 <a href="https://larastream.com">
                     <div class="thumb" style="background: url(img/sponsor/larastream.png);"></div>
                 </a>
@@ -386,7 +396,7 @@
                     <h6 class="text-uppercase"><a href="https://larastream.com">Larastream.com</a></h6>
                     <p>A live streaming platform like Twitch, but for Laravel</p>
                 </div>
-            </div>
+            </div> -->
 
             {{--<div class="item">--}}
             {{--<a href="https://snapshooter.io"><div class="thumb" style="background: url(img/sponsor/snapshooter.png);"></div></a>--}}

@@ -19,7 +19,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $event = Stage::getEvent();
+        $event = Stage::getEvent(true);
         if (!$event) {
             throw new \Exception('No event found.');
         } else {
