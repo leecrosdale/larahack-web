@@ -17,10 +17,18 @@
                     @if ($stage === 1)
                      <h1>Theme: {{ $event->theme }}</h1>
 
+
+                    This year it took a lot of thinking in order to find a good theme, <br/>
+                    I hope that this theme will inspire you to bring an old project back to life, re-imagined in Laravel. <br/><br/>
+                    We all have a project that we wish we finished, or were maybe too inexperienced to write properly at the time. <br/>
+                    If you're new to Laravel or to programming in general,  maybe you can interpret the theme in a different way in order to take part. <br/>
+                    e.g Maybe a text based game that involves building, or even a Minecraft showcase platform!
+
+
                     <h3>Good luck LaraHackers! May Laravel be with you.</h3>
 
 
-                    Judgment Categories:
+                            Judgment Categories:
 
                         <ul>
                             <li>1. Best use of theme</li>
@@ -69,6 +77,10 @@
                     What do I do now? <br/><br/>
 
 
+
+
+
+
                     <ol>
                         <li>Join the LaravelUK Slack Channel (see link at the top). <br/> This is where most of us will be, there is also a #larahack channel to join</li> <br/>
                         <li>Decide if you are working alone or in a team.</li> <br/>
@@ -79,7 +91,6 @@
                         <li>We ask everyone to vote for a project in each of the categories.</li><br/>
                         <li>In 1 weeks time, we will total the votes and announce the winners</li><br/>
                         <li>If you won, we will contact you via the email address you signed up with.</li>
-
                     </ol>
 
 
