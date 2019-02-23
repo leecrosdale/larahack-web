@@ -199,6 +199,10 @@
                             <h3 class="text-white">Crosdale</h3>
                              <div id="twitch-embed-crosdale"></div>
                         </span>
+                        <span class="text-white text-uppercase">
+                            <h3 class="text-white">Thomegemcity</h3>
+                             <div id="twitch-embed-thomegemcity"></div>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -514,6 +518,13 @@
         channel: "crosdale",
         layout: "video"
     });
+    new Twitch.Embed("twitch-embed-thomegemcity", {
+        width: 854,
+        height: 480,
+        channel: "thomegemcity",
+        layout: "video"
+    });
+
 </script>
 </body>
 
