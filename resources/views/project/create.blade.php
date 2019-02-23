@@ -16,7 +16,9 @@
                             </div>
                         @endif
 
-
+                        @if ($latest_project)
+                            You can only create 1 project per event.
+                        @else
 
                             <form class="form-horizontal" action="{{ url('project') }}" method="post">
 
@@ -88,6 +90,7 @@
                                     </div>
                                 </div>
                             </form>
+                        @endif
                     </div>
                 </div>
             </div>
