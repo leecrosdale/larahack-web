@@ -188,8 +188,16 @@
                     <div class="section-title text-center">
                         <h3 class="text-white">Streams</h3>
                         <span class="text-white text-uppercase">
-                            <h3 class="text-white">Ollie Codes</h3>
+                            <h3 class="text-white">OllieCodes</h3>
                              <div id="twitch-embed-ollie-codes"></div>
+                        </span>
+                        <span class="text-white text-uppercase">
+                            <h3 class="text-white">MadMikeyB</h3>
+                             <div id="twitch-embed-madmikeyb"></div>
+                        </span>
+                        <span class="text-white text-uppercase">
+                            <h3 class="text-white">Crosdale</h3>
+                             <div id="twitch-embed-crosdale"></div>
                         </span>
                     </div>
                 </div>
@@ -492,6 +500,18 @@
         width: 854,
         height: 480,
         channel: "olliecodes",
+        layout: "video"
+    });
+    new Twitch.Embed("twitch-embed-madmikeyb", {
+        width: 854,
+        height: 480,
+        channel: "madmikeyb",
+        layout: "video"
+    });
+    new Twitch.Embed("twitch-embed-crosdale", {
+        width: 854,
+        height: 480,
+        channel: "crosdale",
         layout: "video"
     });
 </script>
