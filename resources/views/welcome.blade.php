@@ -186,9 +186,10 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-title text-center">
-                        <h3 class="text-white">Swag</h3>
+                        <h3 class="text-white">Streams</h3>
                         <span class="text-white text-uppercase">
-                            <h3 class="text-white">Swag will be announced soon!</h3>
+                            <h3 class="text-white">Ollie Codes</h3>
+                             <div id="twitch-embed-ollie-codes"></div>
                         </span>
                     </div>
                 </div>
@@ -485,6 +486,16 @@
 <script src="js/jquery.nice-select.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/main.js"></script>
+<script src="https://embed.twitch.tv/embed/v1.js"></script>
+<script type="text/javascript">
+    new Twitch.Embed("twitch-embed-ollie-codes", {
+        width: 854,
+        height: 480,
+        channel: "olliecodes",
+        layout: "video"
+    });
+</script>
+</body>
 
 </body>
 </html>
