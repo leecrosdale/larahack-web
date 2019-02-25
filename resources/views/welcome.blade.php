@@ -504,25 +504,29 @@
         width: 854,
         height: 480,
         channel: "olliecodes",
-        layout: "video"
+        layout: "video",
+        autoplay: false
     });
     new Twitch.Embed("twitch-embed-madmikeyb", {
         width: 854,
         height: 480,
         channel: "madmikeyb",
-        layout: "video"
+        layout: "video",
+        autoplay: false
     });
     new Twitch.Embed("twitch-embed-crosdale", {
         width: 854,
         height: 480,
         channel: "crosdale",
-        layout: "video"
+        layout: "video",
+        autoplay: false
     });
     new Twitch.Embed("twitch-embed-thomegemcity", {
         width: 854,
         height: 480,
         channel: "thomegemcity",
-        layout: "video"
+        layout: "video",
+        autoplay: false
     });
 
 </script>
