@@ -1,0 +1,15 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+
+@responsive {
+    .bg-gradient-brand {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e66686+0,ea7676+100 */
+        background: #EC8369; /* Old browsers */
+    }
+}
+
