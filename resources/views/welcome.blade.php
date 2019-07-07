@@ -40,7 +40,7 @@
                     <div class="w-5/6 sm:w-1/2 p-6">
                         <h3 class="text-2xl text-gray-800 font-bold mb-3">Friday 12 July 2019</h3>
                         <h2 class="text-3xl text-gray-800 font-bold mb-3">05 days 20 hours 29 Min 37 Sec</h2>
-                        <a href="{{ route('register') }}" class="text-orange-600">
+                        <a href="#" class="text-orange-600">
                             <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
                                 Join Now!
                             </button>
@@ -214,11 +214,24 @@
                 </div>
             </div>
             <div class="flex sm:flex-auto justify-center text-orange-500 text-center content-center w-2/3 mx-auto">
-                <div class="w-1/4"><a href="#" class="hover:text-orange-700">Terms</a></div>
-                <div class="w-1/4"><a href="#" class="hover:text-orange-700">Sponsor</a></div>
-                <div class="w-1/4"><a href="#" class="hover:text-orange-700">About</a></div>
-                <div class="w-1/4"><a href="#" class="hover:text-orange-700">Contact</a></div>
+
+
+
             </div>
+        </section>
+
+        <section class="bg-white py-8">
+            <div class="container max-w-5xl mx-auto m-8">
+{{--                <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Streams</h1>--}}
+                <div class="flex leading-normal tracking-normal">
+
+                </div>
+                <div class="flex sm:flex-auto justify-center text-orange-500 text-center content-center w-2/3 mx-auto">
+                    <div class="w-1/4"><a href="#" class="hover:text-orange-700">Terms</a></div>
+                    <div class="w-1/4"><a href="#" class="hover:text-orange-700">Sponsor</a></div>
+                    <div class="w-1/4"><a href="#" class="hover:text-orange-700">About</a></div>
+                    <div class="w-1/4"><a href="#" class="hover:text-orange-700">Contact</a></div>
+                </div>
         </section>
 
     </div>
