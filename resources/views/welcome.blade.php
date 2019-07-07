@@ -3,15 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>LaraHack : The online Laravel Hackathon</title>
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-
-
 </head>
 <body class="bg-gradient-brand font-sans">
 <div class="container overflow-hidden py-12 mx-auto">
@@ -38,43 +33,24 @@
             </svg>
         </div>
 
-        <section class="bg-white border-b py-8">
+        <section class="bg-white py-8">
             <div class="container max-w-5xl mx-auto m-8">
                 <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">LaraHack #4</h1>
-
-
                 <div class="flex flex-wrap">
                     <div class="w-5/6 sm:w-1/2 p-6">
                         <h3 class="text-2xl text-gray-800 font-bold mb-3">Friday 12 July 2019</h3>
-
-
-                        <h2 class="text-3xl text-gray-800 font-bold mb-3"> 05
-
-                            days
-
-                            20
-
-                            hours
-
-                            29
-
-                            Min
-
-                            37
-
-                            Sec</h2>
-
-
-                        <p class="text-gray-600 mb-8">Join 511 other LaraHackers now!<br/><br/>
-
-                            Images from: <a class="text-orange-500 underline" href="https://undraw.co/">undraw.co</a>
-                        </p>
-
+                        <h2 class="text-3xl text-gray-800 font-bold mb-3">05 days 20 hours 29 Min 37 Sec</h2>
+                        <a href="{{ route('register') }}" class="text-orange-600">
+                            <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+                                Join Now!
+                            </button>
+                        </a>
                     </div>
                     <div class="w-full sm:w-1/2 p-6">
-                        <svg class="w-full sm:h-64 mx-auto" viewBox="0 0 1177 598.5" id="e8c09660-db65-4061-a2dc-920e909a0453" data-name="Layer 1"
+                        <svg class="w-full sm:h-64 mx-auto" viewBox="0 0 1177 598.5"
+                             id="e8c09660-db65-4061-a2dc-920e909a0453" data-name="Layer 1"
                              xmlns="http://www.w3.org/2000/svg"
-                             ><title>web_development</title>
+                        ><title>web_development</title>
                             <path d="M1000.12219,420.11243,899.99683,467.5l88.61529-66.2619a500.05588,500.05588,0,0,0-48.38385-63.66846L505.99683,445.5,898.23022,295.87646a499.98052,499.98052,0,0,0-56.95764-43.41418L179.60608,359.03943A495.88009,495.88009,0,0,0,71.00317,668.5h995.98731A495.6132,495.6132,0,0,0,1000.12219,420.11243Z"
                                   transform="translate(-71.00317 -171.5)" fill="#f2f2f2"/>
                             <path d="M787.12,221.69537A495.97179,495.97179,0,0,0,568.99683,171.5c-153.82965,0-291.36139,69.75269-382.71033,179.34869C342.71289,316.57422,615.06372,257.24316,787.12,221.69537Z"
@@ -180,11 +156,77 @@
                                   transform="translate(-71.00317 -171.5)" fill="#2f2e41"/>
                             <rect x="6.99365" y="237.06494" width="477" height="2" fill="#2f2e41"/>
                         </svg>
-
-
                     </div>
                 </div>
             </div>
+        </section>
+
+
+        <section class="bg-gray-400 py-8">
+            <div class="container max-w-5xl mx-auto m-8">
+                <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Sponsors</h1>
+                <div class="flex leading-normal tracking-normal">
+
+                    <div class="w-full p-6">
+                        <div class="carousel relative shadow-2xl bg-white">
+                            <div class="carousel-inner relative overflow-hidden w-full">
+                                <!--Slide 1-->
+                                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                                <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                                    <div class="block h-full w-full bg-indigo-500 text-white text-5xl text-center">Slide 1</div>
+                                </div>
+                                <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                                <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                                <!--Slide 2-->
+                                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                                <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                                    <div class="block h-full w-full bg-orange-500 text-white text-5xl text-center">Slide 2</div>
+                                </div>
+                                <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                                <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                                <!--Slide 3-->
+                                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                                <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                                    <div class="block h-full w-full bg-green-500 text-white text-5xl text-center">Slide 3</div>
+                                </div>
+                                <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                                <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                                <!-- Add additional indicators for each slide-->
+                                <ol class="carousel-indicators">
+                                    <li class="inline-block mr-3">
+                                        <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                                    </li>
+                                    <li class="inline-block mr-3">
+                                        <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                                    </li>
+                                    <li class="inline-block mr-3">
+                                        <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                                    </li>
+                                </ol>
+
+                            </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="flex sm:flex-auto justify-center text-orange-500 text-center content-center w-2/3 mx-auto">
+                <div class="w-1/4"><a href="#" class="hover:text-orange-700">Terms</a></div>
+                <div class="w-1/4"><a href="#" class="hover:text-orange-700">Sponsor</a></div>
+                <div class="w-1/4"><a href="#" class="hover:text-orange-700">About</a></div>
+                <div class="w-1/4"><a href="#" class="hover:text-orange-700">Contact</a></div>
+            </div>
+        </section>
+
     </div>
+    <div class="flex justify-center py-5">
+        <p class="text-white font-hairline text-sm">Images from: <a class="text-gray-800 font-light hover:text-gray-900"
+                                                                    target="_blank"
+                                                                    href="https://undraw.co/">undraw.co</a></p>
+    </div>
+</div>
 </body>
 </html>
