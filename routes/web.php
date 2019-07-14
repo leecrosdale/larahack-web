@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('sponsor', 'SponsorController');
+
+
+Route::get('/terms', 'TermsController@index')->name('terms');
+Route::get('/about', 'AboutController@index')->name('about');
+Route::get('/contact', 'ContactController@index')->name('contact');
