@@ -187,22 +187,22 @@
                 <div class="col-lg-8">
                     <div class="section-title text-center">
                         <h3 class="text-white">Streams</h3>
-                        <span class="text-white text-uppercase">
+                        <!-- <span class="text-white text-uppercase">
                             <h3 class="text-white">OllieCodes</h3>
                              <div id="twitch-embed-ollie-codes"></div>
-                        </span>
-                        <span class="text-white text-uppercase">
+                        </span> -->
+                        <!-- <span class="text-white text-uppercase">
                             <h3 class="text-white">MadMikeyB</h3>
                              <div id="twitch-embed-madmikeyb"></div>
-                        </span>
+                        </span> -->
                         <span class="text-white text-uppercase">
                             <h3 class="text-white">Crosdale</h3>
                              <div id="twitch-embed-crosdale"></div>
                         </span>
-                        <span class="text-white text-uppercase">
+                        <!-- <span class="text-white text-uppercase">
                             <h3 class="text-white">Thomegemcity</h3>
                              <div id="twitch-embed-thomegemcity"></div>
-                        </span>
+                        </span> -->
                     </div>
                 </div>
             </div>
@@ -361,7 +361,7 @@
             {{--</div>--}}
             {{--</div>--}}
             
-            <div class="item">
+            <!-- <div class="item">
                 <a href="https://www.gamefront.com/">
                     <div class="thumb" style="background: url(img/sponsor/gf.svg);"></div>
                 </a>
@@ -369,7 +369,7 @@
                     <h6 class="text-uppercase"><a href="https://www.gamefront.com/">GameFront</a></h6>
                     <p>The best serving of video game culture, since 1998</p>
                 </div>
-            </div>
+            </div> -->
 
             <div class="item">
                 <a href="https://laravelphp.uk/">
@@ -392,6 +392,16 @@
             </div> -->
 
             <div class="item">
+                <a href="https://makepad.live">
+                    <div class="thumb" style="background: url('https://makepad.live/img/makepad_logo.png');"></div>
+                </a>
+                <div class="caption text-center">
+                    <h6 class="text-uppercase"><a href="https://makepad.live">Makepad</a></h6>
+                    <p>Makepad is designed and created for individuals looking to organise projects with a productivity tool that doesn't cost the earth to use.</p>
+                </div>
+            </div>
+
+            <!-- <div class="item">
                 <a href="https://linode.com">
                     <div class="thumb" style="background: url(img/sponsor/linode.png);"></div>
                 </a>
@@ -399,7 +409,7 @@
                     <h6 class="text-uppercase"><a href="https://linode.com">Linode</a></h6>
                     <p>High performance SSD Linux servers for all of your infrastructure needs.</p>
                 </div>
-            </div>
+            </div> -->
 
             <!-- <div class="item">
                 <a href="https://larastream.com">
@@ -500,34 +510,33 @@
 <script src="js/main.js"></script>
 <script src="https://embed.twitch.tv/embed/v1.js"></script>
 <script type="text/javascript">
-    new Twitch.Embed("twitch-embed-ollie-codes", {
-        width: 854,
-        height: 480,
-        channel: "olliecodes",
-        layout: "video",
-        autoplay: false
-    });
-    new Twitch.Embed("twitch-embed-madmikeyb", {
-        width: 854,
-        height: 480,
-        channel: "madmikeyb",
-        layout: "video",
-        autoplay: false
-    });
+    // new Twitch.Embed("twitch-embed-ollie-codes", {
+    //     width: 854,
+    //     height: 480,
+    //     channel: "olliecodes",
+    //     layout: "video",
+    //     autoplay: false
+    // });
+    // new Twitch.Embed("twitch-embed-madmikeyb", {
+    //     width: 854,
+    //     height: 480,
+    //     channel: "madmikeyb",
+    //     layout: "video",
+    //     autoplay: false
+    // });
     new Twitch.Embed("twitch-embed-crosdale", {
-        width: 854,
-        height: 480,
         channel: "crosdale",
         layout: "video",
-        autoplay: false
+        autoplay: false,
+        muted: true
     });
-    new Twitch.Embed("twitch-embed-thomegemcity", {
-        width: 854,
-        height: 480,
-        channel: "thomegemcity",
-        layout: "video",
-        autoplay: false
-    });
+    // new Twitch.Embed("twitch-embed-thomegemcity", {
+    //     width: 854,
+    //     height: 480,
+    //     channel: "thomegemcity",
+    //     layout: "video",
+    //     autoplay: false
+    // });
 
 </script>
 </body>
