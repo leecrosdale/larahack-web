@@ -187,17 +187,17 @@
                 <div class="col-lg-8">
                     <div class="section-title text-center">
                         <h3 class="text-white">Streams</h3>
-                        <!-- <span class="text-white text-uppercase">
-                            <h3 class="text-white">OllieCodes</h3>
-                             <div id="twitch-embed-ollie-codes"></div>
-                        </span> -->
-                        <!-- <span class="text-white text-uppercase">
-                            <h3 class="text-white">MadMikeyB</h3>
-                             <div id="twitch-embed-madmikeyb"></div>
-                        </span> -->
                         <span class="text-white text-uppercase">
                             <h3 class="text-white">Crosdale</h3>
                              <div id="twitch-embed-crosdale"></div>
+                        </span>
+                        <span class="text-white text-uppercase">
+                            <h3 class="text-white">OllieCodes</h3>
+                             <div id="twitch-embed-ollie-codes"></div>
+                        </span>
+                        <span class="text-white text-uppercase">
+                            <h3 class="text-white">MadMikeyB</h3>
+                             <div id="twitch-embed-madmikeyb"></div>
                         </span>
                         <!-- <span class="text-white text-uppercase">
                             <h3 class="text-white">Thomegemcity</h3>
@@ -510,26 +510,29 @@
 <script src="js/main.js"></script>
 <script src="https://embed.twitch.tv/embed/v1.js"></script>
 <script type="text/javascript">
-    // new Twitch.Embed("twitch-embed-ollie-codes", {
-    //     width: 854,
-    //     height: 480,
-    //     channel: "olliecodes",
-    //     layout: "video",
-    //     autoplay: false
-    // });
-    // new Twitch.Embed("twitch-embed-madmikeyb", {
-    //     width: 854,
-    //     height: 480,
-    //     channel: "madmikeyb",
-    //     layout: "video",
-    //     autoplay: false
-    // });
     new Twitch.Embed("twitch-embed-crosdale", {
+        width: 854,
+        height: 480,
         channel: "crosdale",
         layout: "video",
         autoplay: false,
         muted: true
     });
+    new Twitch.Embed("twitch-embed-ollie-codes", {
+        width: 854,
+        height: 480,
+        channel: "olliecodes",
+        layout: "video",
+        autoplay: false
+    });
+    new Twitch.Embed("twitch-embed-madmikeyb", {
+        width: 854,
+        height: 480,
+        channel: "madmikeyb",
+        layout: "video",
+        autoplay: false
+    });
+
     // new Twitch.Embed("twitch-embed-thomegemcity", {
     //     width: 854,
     //     height: 480,
