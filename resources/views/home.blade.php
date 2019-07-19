@@ -22,6 +22,12 @@
                     I feel this feel is broad enough to basically open up the entire Laravel framework, <br/>
                     and should give you the opportunity to build something cool.
 
+                    <br/><br/>
+
+                    If you need help getting started, here is a nice LaraHack template: <a href="https://github.com/mikeaag/larahack-template">GitHub</a>
+
+                    <br/><br/>
+
                     <h3>Good luck LaraHackers! May Laravel be with you.</h3>
 
 

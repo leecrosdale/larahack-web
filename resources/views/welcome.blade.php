@@ -137,6 +137,7 @@
     <!-- Start Feature Area -->
     <section class="featured-area">
         <div class="container">
+
             <div class="row">
                 <div class="col-md-4">
                     <div class="single-feature d-flex flex-wrap justify-content-between">
@@ -393,7 +394,7 @@
 
             <div class="item">
                 <a href="https://makepad.live">
-                    <div class="thumb" style="background: url('https://makepad.live/img/makepad_logo.png');"></div>
+                    <div class="thumb" style="background: url('img/makepad.png');"></div>
                 </a>
                 <div class="caption text-center">
                     <h6 class="text-uppercase"><a href="https://makepad.live">Makepad</a></h6>
