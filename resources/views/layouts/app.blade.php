@@ -65,9 +65,7 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li><a href="{{ url('home') }}">Home</a></li>
-                            <li><a href="https://laravelphp.uk/" target="_blank">LaravelUK &amp; Slack</a></li>
-                            <li><a href="{{ url('swag') }}">Swag</a></li>
-                            <li><a href="{{ url('posts') }}">Posts</a></li>
+                            <li><a href="https://laravelphp.uk/" target="_blank">LaravelUK &amp; Slack</a></li>                           
                             <li><a href="{{ url('project') }}">Projects</a></li>
                             <li><a href="{{ url('request') }}">Requests</a></li>
                             <li class="dropdown">
