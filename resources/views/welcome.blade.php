@@ -200,10 +200,10 @@
                             <h3 class="text-white">MadMikeyB</h3>
                              <div id="twitch-embed-madmikeyb"></div>
                         </span>
-                        <!-- <span class="text-white text-uppercase">
-                            <h3 class="text-white">Thomegemcity</h3>
-                             <div id="twitch-embed-thomegemcity"></div>
-                        </span> -->
+                        <span class="text-white text-uppercase">
+                            <h3 class="text-white">SarfasCodes</h3>
+                             <div id="twitch-embed-sarfascodes"></div>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -534,13 +534,13 @@
         autoplay: false
     });
 
-    // new Twitch.Embed("twitch-embed-thomegemcity", {
-    //     width: 854,
-    //     height: 480,
-    //     channel: "thomegemcity",
-    //     layout: "video",
-    //     autoplay: false
-    // });
+    new Twitch.Embed("twitch-embed-sarfascodes", {
+        width: 854,
+        height: 480,
+        channel: "sarfascodes",
+        layout: "video",
+        autoplay: false
+    });
 
 </script>
 </body>
