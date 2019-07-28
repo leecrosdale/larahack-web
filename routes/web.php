@@ -27,9 +27,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
+
+
 Route::group(['middleware' => 'auth'], function() {
 
     Route::resource('team', 'TeamController');
+    Route::resource('votes', 'VoteController');
     Route::resource('project', 'ProjectController');
     Route::get('project/{id}/join', 'ProjectController@join');
     Route::resource('posts', 'PostController');
