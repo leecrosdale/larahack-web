@@ -20,7 +20,6 @@ class Event extends Model
             return EventStatus::PLANNING;
         }
 
-
         if ($this->event_end <= $now) {
             $status = EventStatus::ENDED;
         } else if ($this->event_voting_end <= $now) {
