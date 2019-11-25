@@ -15015,6 +15015,17 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./resources/css/main.css":
+/*!********************************!*\
+  !*** ./resources/css/main.css ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/js/Pages sync recursive ^\\.\\/.*$":
 /*!******************************************!*\
   !*** ./resources/js/Pages sync ^\.\/.*$ ***!
@@ -15150,26 +15161,15 @@ new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/css/main.css ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/lee/code/larahack/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/lee/code/larahack/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /home/lee/code/larahack/resources/css/main.css */"./resources/css/main.css");
 
 
 /***/ })
