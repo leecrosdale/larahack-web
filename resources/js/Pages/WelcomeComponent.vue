@@ -6,14 +6,15 @@
         <stream-component :streams="streams"></stream-component>
 
 
+
     </div>
 </template>
 
 <script>
     import WelcomeHeroComponent from "../components/welcome/WelcomeHeroComponent";
     import WelcomeAboutComponent from "../components/welcome/WelcomeAboutComponent";
-    import StreamComponent from "../components/welcome/StreamComponent";
-    import SponsorComponent from "../components/welcome/SponsorComponent";
+    import StreamComponent from "../components/StreamComponent";
+    import SponsorComponent from "../components/SponsorComponent";
     export default {
         components: {SponsorComponent, StreamComponent, WelcomeAboutComponent, WelcomeHeroComponent},
         props: [
