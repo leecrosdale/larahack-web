@@ -49,4 +49,10 @@ class Event extends Model
         return $this->hasMany(Stream::class);
     }
 
+    public function sponsors()
+    {
+        return $this->hasMany(Sponsor::class);
+    }
+
+
 }

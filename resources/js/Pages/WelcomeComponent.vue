@@ -2,6 +2,7 @@
     <div>
         <welcome-hero-component :event="event"></welcome-hero-component>
         <welcome-about-component ></welcome-about-component>
+        <sponsor-component :sponsors="sponsors"></sponsor-component>
         <stream-component :streams="streams"></stream-component>
 
 
@@ -12,11 +13,13 @@
     import WelcomeHeroComponent from "../components/welcome/WelcomeHeroComponent";
     import WelcomeAboutComponent from "../components/welcome/WelcomeAboutComponent";
     import StreamComponent from "../components/welcome/StreamComponent";
+    import SponsorComponent from "../components/welcome/SponsorComponent";
     export default {
-        components: {StreamComponent, WelcomeAboutComponent, WelcomeHeroComponent},
+        components: {SponsorComponent, StreamComponent, WelcomeAboutComponent, WelcomeHeroComponent},
         props: [
             'event',
-            'streams'
+            'streams',
+            'sponsors'
         ]
     }
 </script>

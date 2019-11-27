@@ -20,7 +20,8 @@ class WelcomeController extends Controller
 
         return Inertia::render('WelcomeComponent', [
             'event' => $event,
-            'streams' => $event->streams
+            'streams' => $event->streams,
+            'sponsors' => $event->sponsors
         ]);
     }
 }

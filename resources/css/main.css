@@ -3,3 +3,12 @@
 @tailwind components;
 
 @tailwind utilities;
+
+
+.link {
+    @apply text-blue-600 font-bold;
+}
+.link:hover {
+    @apply text-red-600;
+}
+

@@ -24,7 +24,7 @@
 
         <div class="pl-4 flex items-center">
             <a class="toggleColour text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#">
-                LaraHack
+                LaraHack <span class="text-sm font-light">The Laravel Hackathon</span>
             </a>
         </div>
 
