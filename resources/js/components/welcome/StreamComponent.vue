@@ -8,7 +8,7 @@
 
                     <iframe
                         class="iframe-container"
-                        :src="'https://player.twitch.tv/?channel=' + stream.username + '&muted=true'"
+                        :src="'https://player.twitch.tv/?channel=' + stream.username + '&muted=true&autoplay=false'"
                         height="720"
                         width="1280"
                         frameborder="0"

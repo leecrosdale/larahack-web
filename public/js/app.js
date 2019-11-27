@@ -3104,7 +3104,7 @@ var render = function() {
                       src:
                         "https://player.twitch.tv/?channel=" +
                         stream.username +
-                        "&muted=true",
+                        "&muted=true&autoplay=false",
                       height: "720",
                       width: "1280",
                       frameborder: "0",
