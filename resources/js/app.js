@@ -1,6 +1,6 @@
 import { InertiaApp } from '@inertiajs/inertia-vue'
 import Vue from 'vue'
-
+Vue.mixin({ methods: { route: window.route } })
 Vue.use(InertiaApp);
 
 const app = document.getElementById('app');

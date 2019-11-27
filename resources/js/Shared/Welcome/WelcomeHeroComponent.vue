@@ -7,10 +7,12 @@
                 <h1 class="my-4 text-5xl font-bold leading-tight">Theme: {{ event.theme }}</h1>
                 <p class="leading-normal text-2xl mb-8">Join other LaraHackers now!</p>
                 <div class="w-full">
-                    <button
-                        class="hover:underline bg-black text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg align">
-                        Join the Hackathon
-                    </button>
+                    <a href="/register">
+                        <button
+                            class="hover:underline bg-black text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg align">
+                            Join the Hackathon
+                        </button>
+                    </a>
                 </div>
             </div>
 
@@ -19,10 +21,12 @@
                 <h1 class="my-4 text-5xl font-bold leading-tight">Theme announced at start of event!</h1>
                 <p class="leading-normal text-2xl mb-8">Join other LaraHackers now!</p>
                 <div class="w-full">
+                    <a href="/register">
                     <button
                         class="hover:underline bg-black text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg align">
                         Join the Hackathon
                     </button>
+                    </a>
                 </div>
             </div>
 
@@ -44,10 +48,12 @@
                 <h1 class="my-4 text-5xl font-bold leading-tight">Next LaraHack is being planned!</h1>
                 <p class="leading-normal text-2xl mb-8">Check back soon</p>
                 <div class="w-full">
-                    <button
-                        class="hover:underline bg-black text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg align">
-                        Join and get notified!
-                    </button>
+                    <a href="/register">
+                        <button
+                            class="hover:underline bg-black text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg align">
+                            Join and get notified!
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

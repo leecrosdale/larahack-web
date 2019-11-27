@@ -15,3 +15,12 @@ mix.js('resources/js/app.js', 'public/js');
 mix.postCss('resources/css/main.css', 'public/css', [
     require('tailwindcss'),
 ])
+    .webpackConfig({
+        output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
+        resolve: {
+            alias: {
+                'vue$': 'vue/dist/vue.runtime.esm.js',
+                '@': path.resolve('resources/js'),
+            },
+        },
+    })

@@ -18,7 +18,7 @@ class WelcomeController extends Controller
     {
         $event = Event::currentEvent()->first();
 
-        return Inertia::render('WelcomeComponent', [
+        return Inertia::render('Welcome/WelcomeComponent', [
             'event' => $event,
             'streams' => $event->streams,
             'sponsors' => $event->sponsors
