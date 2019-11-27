@@ -3074,39 +3074,54 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _vm.streams && _vm.streams.length > 0
     ? _c("div", { staticClass: "pt-24 text-black" }, [
-        _c("div", { staticClass: "container px-3 mx-auto" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "sm:flex md:flex" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "container align-content-center mx-auto text-gray-700 m-2 rounded"
+          },
+          [
             _c(
               "div",
-              { staticClass: "flex-1" },
+              {
+                staticClass:
+                  "w-full font-extrabold text-3xl text-gray-900 px-6 text-center py-3"
+              },
+              [_vm._v("Streams")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "w-full text-sm font-weight-light text-gray-800 text-center py-3"
+              },
               _vm._l(_vm.streams, function(stream) {
-                return _c("div", [
-                  _vm._v(
-                    "\n                        " +
-                      _vm._s(stream.username) +
-                      "\n                    "
-                  )
+                return _c("div", { staticClass: "w-full" }, [
+                  _c("iframe", {
+                    staticClass: "iframe-container",
+                    attrs: {
+                      src:
+                        "https://player.twitch.tv/?channel=" +
+                        stream.username +
+                        "&muted=true",
+                      height: "720",
+                      width: "1280",
+                      frameborder: "0",
+                      scrolling: "no",
+                      allowfullscreen: "true"
+                    }
+                  })
                 ])
               }),
               0
             )
-          ])
-        ])
+          ]
+        )
       ])
     : _vm._e()
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("p", { staticClass: "text-3xl" }, [_vm._v("Streams")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

@@ -15,5 +15,17 @@ class StreamsTableSeeder extends Seeder
             'event_id' => \App\Event::first()->id,
             'username' => 'crosdale'
         ]);
+        \App\Stream::create([
+            'event_id' => \App\Event::first()->id,
+            'username' => 'madmikeyb'
+        ]);
+        \App\Stream::create([
+            'event_id' => \App\Event::first()->id,
+            'username' => 'olliecodes'
+        ]);
+        \App\Stream::create([
+            'event_id' => \App\Event::first()->id,
+            'username' => 'safascodes'
+        ]);
     }
 }
