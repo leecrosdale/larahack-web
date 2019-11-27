@@ -44,4 +44,9 @@ class Event extends Model
             ->where('active', true);
     }
 
+    public function streams()
+    {
+        return $this->hasMany(Stream::class);
+    }
+
 }
