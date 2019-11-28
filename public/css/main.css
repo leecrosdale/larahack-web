@@ -599,6 +599,23 @@ video {
   height: auto;
 }
 
+h1 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: #3182ce;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #e53e3e;
+}
+
+p {
+  font-weight: 200;
+}
+
 .container {
   width: 100%;
 }
@@ -11401,13 +11418,15 @@ video {
   z-index: auto;
 }
 
-.link {
-  color: #3182ce;
-  font-weight: 700;
+.gradient {
+  background: -webkit-gradient(linear, left top, right top, from(#d53369), to(#daae51));
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }
 
-.link:hover {
-  color: #e53e3e;
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 1%;
 }
 
 @media (min-width: 640px) {
@@ -54513,4 +54532,3 @@ video {
     z-index: auto;
   }
 }
-

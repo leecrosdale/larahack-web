@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-24 text-black" v-if="streams && streams.length > 0">
+    <div class="pt-12 text-black" v-if="streams && streams.length > 0">
         <div class="container align-content-center mx-auto text-gray-700 m-2 rounded">
             <div class="w-full font-extrabold text-3xl text-gray-900 px-6 text-center py-3">Streams</div>
             <div class="w-full text-sm font-weight-light text-gray-800 text-center py-3">

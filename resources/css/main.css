@@ -1,14 +1,32 @@
 @tailwind base;
 
+
+h1 {
+    @apply text-2xl;
+}
+
+a {
+    @apply text-blue-600 font-medium;
+}
+
+a:hover {
+    @apply text-red-600;
+}
+
+p {
+    @apply font-thin;
+}
+
 @tailwind components;
 
 @tailwind utilities;
 
 
-.link {
-    @apply text-blue-600 font-bold;
+.gradient {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }
-.link:hover {
-    @apply text-red-600;
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 1%;
 }
-
