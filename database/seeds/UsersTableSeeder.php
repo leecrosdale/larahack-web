@@ -16,5 +16,11 @@ class UsersTableSeeder extends Seeder
             'email' => 'lee@larahack.com',
             'password' => \Illuminate\Support\Facades\Hash::make('password')
         ]);
+
+        factory(\App\User::class, 40)->create();
+
+
+
+
     }
 }

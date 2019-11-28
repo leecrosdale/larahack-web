@@ -1995,10 +1995,36 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"],
-  name: "Dashboard"
+  name: "Projects",
+  props: ['hackathons']
 });
 
 /***/ }),
@@ -3674,16 +3700,102 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    [
+      _c("h1", { staticClass: "text-3xl" }, [_vm._v("Projects")]),
+      _vm._v(" "),
+      _vm._l(_vm.hackathons, function(hackathon) {
+        return _c("div", [
+          _c("h2", { staticClass: "text-xl" }, [
+            _vm._v(_vm._s(hackathon.name))
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-wrap" }, [
+            _c(
+              "div",
+              { staticClass: "flex flex-wrap" },
+              _vm._l(hackathon.projects, function(project) {
+                return _c("div", [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "flex-auto w-auto h-auto px-4 bg-gray-300 py-2 m-2"
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "max-w-xs rounded overflow-hidden shadow-lg my-2"
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "w-full",
+                            attrs: {
+                              src: project.image,
+                              alt: "Sunset in the mountains"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "px-6 py-4" }, [
+                            _c(
+                              "div",
+                              { staticClass: "font-bold text-xl mb-2" },
+                              [_vm._v(_vm._s(project.title))]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "p",
+                              { staticClass: "text-grey-darker text-base" },
+                              [
+                                _vm._v(
+                                  "\n                                    " +
+                                    _vm._s(project.description) +
+                                    "\n                                "
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "px-6 py-4" },
+                            _vm._l(project.users, function(user) {
+                              return _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                            " +
+                                      _vm._s(user.name) +
+                                      "\n                        "
+                                  )
+                                ]
+                              )
+                            }),
+                            0
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ])
+              }),
+              0
+            )
+          ])
+        ])
+      })
+    ],
+    2
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("Projects")])])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -4152,7 +4264,7 @@ var staticRenderFns = [
             "a",
             {
               staticClass: "inline-block py-2 px-4 no-underline",
-              attrs: { href: "/home" }
+              attrs: { href: "https://laravelphp.uk", target: "_blank" }
             },
             [_vm._v("LaravelUK & Slack")]
           )

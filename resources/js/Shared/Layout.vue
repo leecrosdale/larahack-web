@@ -26,7 +26,7 @@
                                 <a class="inline-block py-2 px-4 no-underline" href="/home">Dashboard</a>
                             </li>
                             <li class="mr-3">
-                                <a class="inline-block py-2 px-4 no-underline" href="/home">LaravelUK & Slack</a>
+                                <a class="inline-block py-2 px-4 no-underline" href="https://laravelphp.uk" target="_blank">LaravelUK & Slack</a>
                             </li>
                             <li class="mr-3">
                                 <a class="inline-block py-2 px-4 no-underline" href="/projects">Projects</a>

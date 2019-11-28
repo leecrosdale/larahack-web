@@ -6,7 +6,7 @@ use Faker\Generator as Faker;
 
 $factory->define(\App\Hackathon::class, function (Faker $faker) {
     return [
-        'name' => 'LaraHack #1',
+        'name' => 'LaraHack #2',
         'start' => \Carbon\Carbon::now()->subDay(),
         'voting_start' => \Carbon\Carbon::now()->addWeek(),
         'voting_end' => \Carbon\Carbon::now()->addWeeks(2),

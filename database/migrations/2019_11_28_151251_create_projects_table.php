@@ -15,7 +15,15 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('hackathon_id');
+            $table->string('title', 80);
+            $table->text('description');
+            $table->text('url')->nullable();
+            $table->text('repo')->nullable();
+            $table->text('image')->nullable();
             $table->timestamps();
+
+            $table->foreign('hackathon_id')->references('id')->on('hackathons');
         });
     }
 

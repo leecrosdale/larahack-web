@@ -54,5 +54,10 @@ class Hackathon extends Model
         return $this->hasMany(Sponsor::class);
     }
 
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
+
 
 }

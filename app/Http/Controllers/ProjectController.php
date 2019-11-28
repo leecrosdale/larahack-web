@@ -2,20 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Hackathon;
 use App\Project;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class ProjectController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        return Inertia::render('Projects/Index');
+        return Inertia::render('Projects/Index', [
+            'hackathons' => Hackathon::with(['projects', 'projects.users'])->get()
+        ]);
     }
 
     /**
