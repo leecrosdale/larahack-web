@@ -2268,7 +2268,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['streams']
 });
@@ -3999,7 +3998,7 @@ var render = function() {
     _vm._v(" "),
     _c(
       "main",
-      { staticClass: "container mx-auto flex-grow p-6" },
+      { staticClass: "container mx-auto flex-grow lg:p-6" },
       [_c("flash-messages"), _vm._v(" "), _vm._t("default")],
       2
     ),
@@ -4302,19 +4301,19 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _vm.streams && _vm.streams.length > 0
-    ? _c("div", { staticClass: "pt-12 text-black" }, [
+    ? _c("div", { staticClass: "text-black" }, [
         _c(
           "div",
           {
             staticClass:
-              "container align-content-center mx-auto text-gray-700 m-2 rounded"
+              "container align-content-center mx-auto text-gray-700 m-2"
           },
           [
             _c(
               "div",
               {
                 staticClass:
-                  "w-full font-extrabold text-3xl text-gray-900 px-6 text-center py-3"
+                  "w-full font-extrabold text-3xl text-gray-900 text-center py-3"
               },
               [_vm._v("Streams")]
             ),
@@ -4323,10 +4322,10 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "w-full text-sm font-weight-light text-gray-800 text-center py-3"
+                  "w-full text-sm font-weight-light text-gray-800 text-center"
               },
               _vm._l(_vm.streams, function(stream) {
-                return _c("div", { staticClass: "w-full" }, [
+                return _c("div", [
                   _c("iframe", {
                     staticClass: "iframe-container",
                     attrs: {
