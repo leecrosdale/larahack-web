@@ -53,7 +53,7 @@
             </div>
         </nav>
 
-        <main class="container mx-auto flex-grow lg:p-6">
+        <main class="container mx-auto flex-grow p-3 lg:p-6">
             <flash-messages/>
             <slot/>
         </main>

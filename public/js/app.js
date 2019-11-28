@@ -2020,6 +2020,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -3707,7 +3708,7 @@ var render = function() {
       _vm._v(" "),
       _vm._l(_vm.hackathons, function(hackathon) {
         return _c("div", [
-          _c("h2", { staticClass: "text-xl" }, [
+          _c("h2", { staticClass: "text-xl py-6" }, [
             _vm._v(_vm._s(hackathon.name))
           ]),
           _vm._v(" "),
@@ -3719,23 +3720,20 @@ var render = function() {
                 return _c("div", [
                   _c(
                     "div",
-                    {
-                      staticClass:
-                        "flex-auto w-auto h-auto px-4 bg-gray-300 py-2 m-2"
-                    },
+                    { staticClass: "flex-auto w-auto h-auto px-4 py-2 m-2" },
                     [
                       _c(
                         "div",
                         {
                           staticClass:
-                            "max-w-xs rounded overflow-hidden shadow-lg my-2"
+                            "max-w-xs rounded overflow-hidden border-2 my-2 py-3"
                         },
                         [
                           _c("img", {
-                            staticClass: "w-full",
+                            staticClass: "w-full h-64",
                             attrs: {
                               src: project.image,
-                              alt: "Sunset in the mountains"
+                              alt: project.title + " image"
                             }
                           }),
                           _vm._v(" "),
@@ -3748,7 +3746,9 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "p",
-                              { staticClass: "text-grey-darker text-base" },
+                              {
+                                staticClass: "text-grey-darker text-base h-64"
+                              },
                               [
                                 _vm._v(
                                   "\n                                    " +
@@ -3756,18 +3756,36 @@ var render = function() {
                                     "\n                                "
                                 )
                               ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "p",
+                              {
+                                staticClass:
+                                  "justify-center align-content-center text-center text-medium"
+                              },
+                              [
+                                _c(
+                                  "a",
+                                  {
+                                    attrs: {
+                                      href: project.url,
+                                      target: "_blank"
+                                    }
+                                  },
+                                  [_vm._v("View Project")]
+                                )
+                              ]
                             )
                           ]),
                           _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "px-6 py-4" },
-                            _vm._l(project.users, function(user) {
-                              return _c(
+                          _vm._l(project.users, function(user) {
+                            return _c("div", { staticClass: "px-6 py-1" }, [
+                              _c(
                                 "span",
                                 {
                                   staticClass:
-                                    "inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
+                                    "flex flex-wrap bg-red-400 align-content-center text-center justify-center rounded-full px-3 py-1 text-sm font-semibold text-gray-800  mr-2"
                                 },
                                 [
                                   _vm._v(
@@ -3777,10 +3795,10 @@ var render = function() {
                                   )
                                 ]
                               )
-                            }),
-                            0
-                          )
-                        ]
+                            ])
+                          })
+                        ],
+                        2
                       )
                     ]
                   )
@@ -4110,7 +4128,7 @@ var render = function() {
     _vm._v(" "),
     _c(
       "main",
-      { staticClass: "container mx-auto flex-grow lg:p-6" },
+      { staticClass: "container mx-auto flex-grow p-3 lg:p-6" },
       [_c("flash-messages"), _vm._v(" "), _vm._t("default")],
       2
     ),
