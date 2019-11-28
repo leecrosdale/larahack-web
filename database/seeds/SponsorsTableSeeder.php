@@ -11,6 +11,6 @@ class SponsorsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Sponsor::class, 5)->create(['event_id' => \App\Event::first()->id]);
+        factory(\App\Sponsor::class, 5)->create(['hackathon_id' => \App\Hackathon::first()->id]);
     }
 }

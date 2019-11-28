@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Event;
+use App\Hackathon;
 use Illuminate\Http\Request;
 
-class EventController extends Controller
+class HackathonController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class EventController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Event  $event
+     * @param  \App\Hackathon  $hackathon
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show(Hackathon $hackathon)
     {
         //
     }
@@ -52,10 +52,10 @@ class EventController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Event  $event
+     * @param  \App\Hackathon  $hackathon
      * @return \Illuminate\Http\Response
      */
-    public function edit(Event $event)
+    public function edit(Hackathon $hackathon)
     {
         //
     }
@@ -64,10 +64,10 @@ class EventController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Event  $event
+     * @param  \App\Hackathon  $hackathon
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Event $event)
+    public function update(Request $request, Hackathon $hackathon)
     {
         //
     }
@@ -75,10 +75,10 @@ class EventController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Event  $event
+     * @param  \App\Hackathon  $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event)
+    public function destroy(Hackathon $hackathon)
     {
         //
     }

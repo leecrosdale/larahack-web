@@ -25,8 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return Inertia::render('ExampleComponent', [
-            'create_url' => URL::route('users.create'),
-        ]);
+        return Inertia::render('Dashboard');
     }
 }

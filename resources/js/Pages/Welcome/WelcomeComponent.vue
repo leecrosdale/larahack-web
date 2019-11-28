@@ -34,7 +34,7 @@
         <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
     </nav>
 
-        <welcome-hero-component :event="event"></welcome-hero-component>
+        <welcome-hero-component :hackathon="hackathon"></welcome-hero-component>
         <welcome-about-component ></welcome-about-component>
         <sponsor-component :sponsors="sponsors"></sponsor-component>
         <stream-component :streams="streams"></stream-component>
@@ -75,7 +75,7 @@
     export default {
         components: {SponsorComponent, StreamComponent, WelcomeAboutComponent, WelcomeHeroComponent},
         props: [
-            'event',
+            'hackathon',
             'streams',
             'sponsors'
         ]

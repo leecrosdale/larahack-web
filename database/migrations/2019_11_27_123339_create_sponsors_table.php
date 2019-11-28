@@ -15,13 +15,13 @@ class CreateSponsorsTable extends Migration
     {
         Schema::create('sponsors', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('event_id');
+            $table->unsignedBigInteger('hackathon_id');
             $table->string('name');
             $table->text('image');
             $table->text('description');
             $table->text('url');
             $table->timestamps();
-            $table->foreign('event_id')->references('id')->on('events');
+            $table->foreign('hackathon_id')->references('id')->on('hackathons');
         });
     }
 

@@ -2,9 +2,9 @@
     <div class="pt-24 text-black">
         <div
             class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row justify-center align-content-center items-center">
-            <div class="flex flex-col w-full text-center" v-if="event && event.status === 'running'">
-                <p class="uppercase tracking-loose w-full">{{ event.name }}</p>
-                <h1 class="my-4 text-5xl font-bold leading-tight">Theme: {{ event.theme }}</h1>
+            <div class="flex flex-col w-full text-center" v-if="hackathon && hackathon.status === 'running'">
+                <p class="uppercase tracking-loose w-full">{{ hackathon.name }}</p>
+                <h1 class="my-4 text-5xl font-bold leading-tight">Theme: {{ hackathon.theme }}</h1>
                 <p class="leading-normal text-2xl mb-8">Join other LaraHackers now!</p>
                 <div class="w-full">
                     <a href="/register">
@@ -16,8 +16,8 @@
                 </div>
             </div>
 
-            <div class="flex flex-col w-full text-center" v-else-if="event && event.status === 'starting'">
-                <p class="uppercase tracking-loose w-full">{{ event.name }}</p>
+            <div class="flex flex-col w-full text-center" v-else-if="hackathon && hackathon.status === 'starting'">
+                <p class="uppercase tracking-loose w-full">{{ hackathon.name }}</p>
                 <h1 class="my-4 text-5xl font-bold leading-tight">Theme announced at start of event!</h1>
                 <p class="leading-normal text-2xl mb-8">Join other LaraHackers now!</p>
                 <div class="w-full">
@@ -30,15 +30,15 @@
                 </div>
             </div>
 
-            <div class="flex flex-col w-full text-center" v-else-if="event && event.status === 'voting'">
-                <p class="uppercase tracking-loose w-full">{{ event.name }}</p>
-                <h1 class="my-4 text-5xl font-bold leading-tight">Theme: {{ event.theme }}</h1>
+            <div class="flex flex-col w-full text-center" v-else-if="hackathon && hackathon.status === 'voting'">
+                <p class="uppercase tracking-loose w-full">{{ hackathon.name }}</p>
+                <h1 class="my-4 text-5xl font-bold leading-tight">Theme: {{ hackathon.theme }}</h1>
                 <p class="leading-normal text-2xl mb-8">Voting now in progress</p>
             </div>
 
-            <div class="flex flex-col w-full text-center" v-else-if="event && event.status === 'voting-ended'">
-                <p class="uppercase tracking-loose w-full">{{ event.name }}</p>
-                <h1 class="my-4 text-5xl font-bold leading-tight">{{ event.theme }}</h1>
+            <div class="flex flex-col w-full text-center" v-else-if="hackathon && hackathon.status === 'voting-ended'">
+                <p class="uppercase tracking-loose w-full">{{ hackathon.name }}</p>
+                <h1 class="my-4 text-5xl font-bold leading-tight">{{ hackathon.theme }}</h1>
                 <p class="leading-normal text-2xl mb-8">Voting Ended</p>
 
                 Results here
@@ -63,7 +63,7 @@
 <script>
     export default {
         props: [
-            'event'
+            'hackathon'
         ]
     }
 </script>

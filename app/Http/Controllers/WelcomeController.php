@@ -2,24 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Event;
+use App\Hackathon;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class WelcomeController extends Controller
 {
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+
     public function index()
     {
-        $event = Event::currentEvent()->first();
+        $hackathon = Hackathon::currentHackathon()->first();
 
         return Inertia::render('Welcome/WelcomeComponent', [
-            'event' => $event,
+            'hackathon' => $hackathon,
             'streams' => $event->streams,
             'sponsors' => $event->sponsors
         ]);

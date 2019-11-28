@@ -12,19 +12,19 @@ class StreamsTableSeeder extends Seeder
     public function run()
     {
         \App\Stream::create([
-            'event_id' => \App\Event::first()->id,
+            'hackathon_id' => \App\Hackathon::first()->id,
             'username' => 'crosdale'
         ]);
         \App\Stream::create([
-            'event_id' => \App\Event::first()->id,
+            'hackathon_id' => \App\Hackathon::first()->id,
             'username' => 'madmikeyb'
         ]);
         \App\Stream::create([
-            'event_id' => \App\Event::first()->id,
+            'hackathon_id' => \App\Hackathon::first()->id,
             'username' => 'olliecodes'
         ]);
         \App\Stream::create([
-            'event_id' => \App\Event::first()->id,
+            'hackathon_id' => \App\Hackathon::first()->id,
             'username' => 'safascodes'
         ]);
     }

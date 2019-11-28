@@ -4,7 +4,7 @@
 namespace App\Enums;
 
 
-class EventStatus
+class HackathonStatus
 {
     const STARTING = 'starting';
     const RUNNING = 'running';

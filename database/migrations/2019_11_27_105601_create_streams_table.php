@@ -15,11 +15,11 @@ class CreateStreamsTable extends Migration
     {
         Schema::create('streams', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('event_id');
+            $table->unsignedBigInteger('hackathon_id');
             $table->string('username');
             $table->timestamps();
 
-            $table->foreign('event_id')->references('id')->on('events');
+            $table->foreign('hackathon_id')->references('id')->on('hackathons');
         });
     }
 
