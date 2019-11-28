@@ -14,7 +14,7 @@ class WelcomeController extends Controller
     {
         $hackathon = Hackathon::currentHackathon()->first();
 
-        return Inertia::render('Welcome/WelcomeComponent', [
+        return Inertia::render('Welcome/Welcome', [
             'hackathon' => $hackathon,
             'streams' => $hackathon->streams,
             'sponsors' => $hackathon->sponsors

@@ -600,7 +600,8 @@ video {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.875rem;
 }
 
 a {
@@ -614,6 +615,10 @@ a:hover {
 
 p {
   font-weight: 200;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .container {

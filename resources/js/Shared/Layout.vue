@@ -3,7 +3,8 @@
         <nav class="w-full z-30 top-0 text-white border-t border-grey p-4">
             <div class="w-full container mx-auto flex justify-between mt-0 py-2">
                 <div class="pl-4 items-center">
-                    <a class="toggleColour text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+                    <a style="font-family: 'Pacifico', cursive;"
+                       class="toggleColour text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
                        href="#">
                         LaraHack <span class="text-sm font-light">The Laravel Hackathon</span>
                     </a>
@@ -19,23 +20,35 @@
                 <div
                     class="w-full flex-grow lg:flex lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
                     id="nav-content">
-                    <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                        <li class="mr-3">
-                            <a class="inline-block py-2 px-4 no-underline" href="/home">Dashboard</a>
-                        </li>
-                        <li class="mr-3">
-                            <a class="inline-block py-2 px-4 no-underline" href="/home">LaravelUK & Slack</a>
-                        </li>
-                        <li class="mr-3">
-                            <a class="inline-block py-2 px-4 no-underline" href="/projects">Projects</a>
-                        </li>
-                        <li class="mr-3">
-                            <a class="inline-block py-2 px-4 no-underline" href="/requests">Requests</a>
-                        </li>
-
-                    </ul>
-                    <a href="/register"
-                       class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">Register</a>
+                    <div class="flex flex-1" v-if="$page.auth.user !== null">
+                        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                            <li class="mr-3">
+                                <a class="inline-block py-2 px-4 no-underline" href="/home">Dashboard</a>
+                            </li>
+                            <li class="mr-3">
+                                <a class="inline-block py-2 px-4 no-underline" href="/home">LaravelUK & Slack</a>
+                            </li>
+                            <li class="mr-3">
+                                <a class="inline-block py-2 px-4 no-underline" href="/projects">Projects</a>
+                            </li>
+                            <li class="mr-3">
+                                <a class="inline-block py-2 px-4 no-underline" href="/requests">Requests</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-1" v-else>
+                        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                            <li class="mr-3">
+                                <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="/">Home</a>
+                            </li>
+                            <li class="mr-3">
+                                <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                                   href="/login">Login</a>
+                            </li>
+                        </ul>
+                        <a href="/register"
+                           class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">Register</a>
+                    </div>
                 </div>
             </div>
         </nav>

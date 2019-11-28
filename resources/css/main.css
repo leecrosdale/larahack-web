@@ -2,7 +2,8 @@
 
 
 h1 {
-    @apply text-2xl;
+    font-family: 'Pacifico', cursive;
+    @apply text-3xl;
 }
 
 a {
@@ -15,6 +16,10 @@ a:hover {
 
 p {
     @apply font-thin;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 @tailwind components;

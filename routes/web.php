@@ -18,3 +18,5 @@ Route::post('login')->name('login.attempt')->uses('Auth\LoginController@login')-
 Route::post('logout')->name('logout')->uses('Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('projects', 'ProjectController');
