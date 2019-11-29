@@ -18,13 +18,14 @@
                      <h1>Theme: {{ $event->theme }}</h1>
 
 
-                    This LaraHack the theme was chosen by a member of our community, so I'm sure you understand why the theme is what it is. <br/>
+                    There are so many ways we can communicate, I'm excited to see what everyone comes up with!
+                    
                     I feel this feel is broad enough to basically open up the entire Laravel framework, <br/>
                     and should give you the opportunity to build something cool.
 
                     <br/><br/>
 
-                    If you need help getting started, here is a nice LaraHack template: <a href="https://github.com/mikeaag/larahack-template">GitHub</a>
+                    If you need help getting started, here is a nice LaraHack template: <a href="https://github.com/larahack-hackathon/template">GitHub</a>
 
                     <br/><br/>
 
