@@ -2021,11 +2021,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   layout: _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"],
   name: "Projects",
-  props: ['hackathons']
+  props: ['hackathons', 'user_projects']
 });
 
 /***/ }),
@@ -2136,6 +2169,9 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_FlashMessages__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Shared/FlashMessages */ "./resources/js/Shared/FlashMessages.vue");
+//
+//
+//
 //
 //
 //
@@ -3704,110 +3740,215 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("h1", { staticClass: "text-3xl" }, [_vm._v("Projects")]),
+      _c("h1", { staticClass: "text-3xl" }, [_vm._v("Your Projects")]),
       _vm._v(" "),
-      _vm._l(_vm.hackathons, function(hackathon) {
-        return _c("div", [
-          _c("h2", { staticClass: "text-xl py-6" }, [
-            _vm._v(_vm._s(hackathon.name))
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex flex-wrap" }, [
-            _c(
-              "div",
-              { staticClass: "flex flex-wrap" },
-              _vm._l(hackathon.projects, function(project) {
-                return _c("div", [
-                  _c(
-                    "div",
-                    { staticClass: "flex-auto w-auto h-auto px-4 py-2 m-2" },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "max-w-xs rounded overflow-hidden border-2 my-2 py-3"
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "w-full h-64",
-                            attrs: {
-                              src: project.image,
-                              alt: project.title + " image"
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "px-6 py-4" }, [
-                            _c(
-                              "div",
-                              { staticClass: "font-bold text-xl mb-2" },
-                              [_vm._v(_vm._s(project.title))]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "p",
-                              {
-                                staticClass: "text-grey-darker text-base h-64"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                    " +
-                                    _vm._s(project.description) +
-                                    "\n                                "
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "p",
-                              {
-                                staticClass:
-                                  "justify-center align-content-center text-center text-medium"
-                              },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    attrs: {
-                                      href: project.url,
-                                      target: "_blank"
-                                    }
-                                  },
-                                  [_vm._v("View Project")]
-                                )
-                              ]
+      _vm.user_projects.length > 0
+        ? _c(
+            "div",
+            { staticClass: "flex flex-wrap" },
+            _vm._l(_vm.user_projects, function(project) {
+              return _c("div", [
+                _c(
+                  "div",
+                  { staticClass: "flex-auto w-auto h-auto px-4 py-2 m-2" },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "max-w-xs rounded overflow-hidden border-2 my-2 py-3"
+                      },
+                      [
+                        _c("img", {
+                          staticClass: "w-full h-64",
+                          attrs: {
+                            src: project.image,
+                            alt: project.title + " image"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "px-6 py-4" }, [
+                          _c("div", { staticClass: "font-bold text-xl mb-2" }, [
+                            _vm._v(
+                              _vm._s(project.hackathon.name) +
+                                " - " +
+                                _vm._s(project.hackathon.theme) +
+                                " "
                             )
                           ]),
                           _vm._v(" "),
-                          _vm._l(project.users, function(user) {
-                            return _c("div", { staticClass: "px-6 py-1" }, [
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "flex flex-wrap bg-red-400 align-content-center text-center justify-center rounded-full px-3 py-1 text-sm font-semibold text-gray-800  mr-2"
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                            " +
-                                      _vm._s(user.name) +
-                                      "\n                        "
-                                  )
-                                ]
+                          _c("div", { staticClass: "font-bold text-xl mb-2" }, [
+                            _vm._v(_vm._s(project.title))
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "p",
+                            { staticClass: "text-grey-darker text-base h-64" },
+                            [
+                              _vm._v(
+                                "\n                            " +
+                                  _vm._s(project.description) +
+                                  "\n                        "
                               )
-                            ])
-                          })
-                        ],
-                        2
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "p",
+                            {
+                              staticClass:
+                                "justify-center align-content-center text-center text-medium"
+                            },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  attrs: { href: project.url, target: "_blank" }
+                                },
+                                [_vm._v("View Project")]
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(project.users, function(user) {
+                          return _c("div", { staticClass: "px-6 py-1" }, [
+                            _c(
+                              "span",
+                              {
+                                staticClass:
+                                  "flex flex-wrap bg-red-400 align-content-center text-center justify-center rounded-full px-3 py-1 text-sm font-semibold text-gray-800  mr-2"
+                              },
+                              [
+                                _vm._v(
+                                  "\n                            " +
+                                    _vm._s(user.name) +
+                                    "\n                        "
+                                )
+                              ]
+                            )
+                          ])
+                        })
+                      ],
+                      2
+                    )
+                  ]
+                )
+              ])
+            }),
+            0
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c("h1", { staticClass: "text-3xl" }, [_vm._v("Projects")]),
+      _vm._v(" "),
+      _vm._l(_vm.hackathons, function(hackathon) {
+        return hackathon.projects.length > 0
+          ? _c("div", [
+              _c("h2", { staticClass: "text-xl py-6" }, [
+                _vm._v(_vm._s(hackathon.name))
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex flex-wrap" }, [
+                _c(
+                  "div",
+                  { staticClass: "flex flex-wrap" },
+                  _vm._l(hackathon.projects, function(project) {
+                    return _c("div", [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "flex-auto w-auto h-auto px-4 py-2 m-2"
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "max-w-xs rounded overflow-hidden border-2 my-2 py-3"
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "w-full h-64",
+                                attrs: {
+                                  src: project.image,
+                                  alt: project.title + " image"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "px-6 py-4" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "font-bold text-xl mb-2" },
+                                  [_vm._v(_vm._s(project.title))]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass:
+                                      "text-grey-darker text-base h-64"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(project.description) +
+                                        "\n                                "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass:
+                                      "justify-center align-content-center text-center text-medium"
+                                  },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: project.url,
+                                          target: "_blank"
+                                        }
+                                      },
+                                      [_vm._v("View Project")]
+                                    )
+                                  ]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _vm._l(project.users, function(user) {
+                                return _c("div", { staticClass: "px-6 py-1" }, [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "flex flex-wrap bg-red-400 align-content-center text-center justify-center rounded-full px-3 py-1 text-sm font-semibold text-gray-800  mr-2"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                            " +
+                                          _vm._s(user.name) +
+                                          "\n                        "
+                                      )
+                                    ]
+                                  )
+                                ])
+                              })
+                            ],
+                            2
+                          )
+                        ]
                       )
-                    ]
-                  )
-                ])
-              }),
-              0
-            )
-          ])
-        ])
+                    ])
+                  }),
+                  0
+                )
+              ])
+            ])
+          : _vm._e()
       })
     ],
     2
@@ -4329,6 +4470,17 @@ var staticRenderFns = [
               attrs: { href: "/" }
             },
             [_vm._v("Home")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mr-3" }, [
+          _c(
+            "a",
+            {
+              staticClass: "inline-block py-2 px-4 no-underline",
+              attrs: { href: "/projects" }
+            },
+            [_vm._v("Projects")]
           )
         ]),
         _vm._v(" "),

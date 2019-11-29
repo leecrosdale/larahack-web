@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Hackathon;
 use App\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 class ProjectController extends Controller
@@ -13,7 +14,8 @@ class ProjectController extends Controller
     public function index()
     {
         return Inertia::render('Projects/Index', [
-            'hackathons' => Hackathon::with(['projects', 'projects.users'])->get()
+            'hackathons' => Hackathon::with(['projects', 'projects.users'])->get(),
+            'user_projects' => Auth::user() ? Auth::user()->projects()->with('hackathon')->get() : [],
         ]);
     }
 

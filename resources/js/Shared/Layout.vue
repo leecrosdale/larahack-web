@@ -42,6 +42,9 @@
                                 <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="/">Home</a>
                             </li>
                             <li class="mr-3">
+                                <a class="inline-block py-2 px-4 no-underline" href="/projects">Projects</a>
+                            </li>
+                            <li class="mr-3">
                                 <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
                                    href="/login">Login</a>
                             </li>

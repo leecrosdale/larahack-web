@@ -23,7 +23,7 @@ class CreateProjectsTable extends Migration
             $table->text('image')->nullable();
             $table->timestamps();
 
-            $table->foreign('hackathon_id')->references('id')->on('hackathons');
+            $table->foreign('hackathon_id')->references('id')->on('hackathons')->onDelete('cascade');
         });
     }
 
