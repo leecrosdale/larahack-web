@@ -99,5 +99,24 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('google.recaptcha_key') }}"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute("{{ config('google.recaptcha_key') }}", {action: 'register'}).then(function(token) {
+
+                if (token)
+                {
+                    let recaptcha = document.getElementById('recaptcha');
+                    if (recaptcha) {
+                        recaptcha.value = token;
+                    }
+                }
+
+            });
+        });
+    </script>
+
+
 </body>
 </html>
