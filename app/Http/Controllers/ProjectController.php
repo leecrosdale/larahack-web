@@ -24,7 +24,7 @@ class ProjectController extends Controller
             throw new \Exception('No event found.');
         } else {
             $projects = Project::where('event_id', $event->id)->get();
-            $past_projects = Project::where('event_id','!=', $event->id)->get();
+            $past_projects = Project::where('event_id','!=', $event->id)->orderBy('created_at', 'DESC')->get();
         }
         return view('project.index', ['projects' => $projects,'past_projects' => $past_projects]);
     }
