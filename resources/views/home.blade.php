@@ -17,11 +17,11 @@
                     @if ($stage === 1)
                      <h1>Theme: {{ $event->theme }}</h1>
 
+                    We all have a sense of community, be it our family, our neighbours, our online groups, our friends or maybe even local businesses. Build something for them. <br/>
 
-                    There are so many ways we can communicate, I'm excited to see what everyone comes up with!
-                    
-                    I feel this feel is broad enough to basically open up the entire Laravel framework, <br/>
-                    and should give you the opportunity to build something cool.
+                    #STAYSAFE #STAYHOME <br/>
+
+                    <b>Please message me on twitter (<a href="https://twitter.com/leecrosdale">@leecrosdale</a>) if you'd like an invite into the LaravelUK slack channel.</b>
 
                     <br/><br/>
 
@@ -30,8 +30,7 @@
                     <br/><br/>
 
                     <h3>Good luck LaraHackers! May Laravel be with you.</h3>
-
-
+                        
                             Judgment Categories:
 
                         <ul>
