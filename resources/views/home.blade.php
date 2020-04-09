@@ -30,7 +30,7 @@
                     <br/><br/>
 
                     <h3>Good luck LaraHackers! May Laravel be with you.</h3>
-                        
+
                             Judgment Categories:
 
                         <ul>
